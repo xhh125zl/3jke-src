@@ -37,7 +37,7 @@ a{
 
 
 .footer{ width:100%; height:216px; margin:0 auto; background:#666666; position:relative; top:20px;}
-.footer .footer-con{ width:965px; margin:0 auto; padding-top:20px;}
+.footer .footer-con{ width:965px; margin:0 auto; padding-top:20px;margin-top:20px}
 .footer .footer-con .f-left{ display:inline-block; float:left; margin-top:60px;}
 .footer .footer-con .f-right{ display:inline-block; float:right; margin-top:60px;}
 .footer .footer-con .f-right span{ font:normal 30px "微软雅黑"; color:#bdbaba;top:-10px;left:20px; position:relative;}
