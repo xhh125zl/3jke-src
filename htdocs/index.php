@@ -1,29 +1,3 @@
-<?php
-
-function curl_post($uri, $data) {
-    $ch = curl_init ();
-    curl_setopt ( $ch, CURLOPT_URL, $uri );
-    curl_setopt ( $ch, CURLOPT_POST, 1 );
-    curl_setopt ( $ch, CURLOPT_HEADER, 0 );
-    curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, 1 );
-    curl_setopt ( $ch, CURLOPT_POSTFIELDS, $data );
-    $return = curl_exec ( $ch );
-    curl_close ( $ch );
-    return $return;
-}
-
-if ($_POST) {
-    $uri = 'http://401.wzw.com/member/login.php';
-    // 参数数组
-    $data = array (
-        'Account' => $_POST['Account'],
-        'Password' => $_POST['Password'],
-        'VerifyCode' => $_POST['VerifyCode']
-    );
-    echo $res= curl_post($uri, $data);die;
-}
-
-?>
 <!doctype html>
 <html>
 <head>
@@ -36,53 +10,15 @@ if ($_POST) {
     <script src="js/layer/layer.js"></script>
     <script src="http://401.wzw.com/member/login-3jk.php"></script>
     <script type="text/javascript">
-    function isMobile(mobile) {
-        var mobile = $.trim(mobile);
-        if (!/^(13[0-9]|17[0-9]|15[0-9]|18[0-9])\d{8}$/i.test(mobile)) {
-            return false;
-        }
-        return true;
-    }
-
-    function reflashCode() {
-        $('.verifyimg').attr('src', 'http://401.wzw.com/member/login.php?action=verifycode&t='+Math.random());
-    }
-
-    $(function(){
-        reflashCode();
-
-        $('.sub').click(function(){
-            var mobile = $('#mobiePhone').val();
-            var password = $('#password').val();
-            var code = $('#code').val();
-
-            $.ajax({
-                type: 'post',
-                url: '',
-                data: {'Account':mobile, 'Password':password, 'VerifyCode':code},
-                success: function(data){
-                    if (data.status == 1) {
-                        layer.alert('登录成功');
-                    } else {
-                        if (data.code == '') {
-                            layer.alert(55);
-                        } else {
-                            layer.alert('登录失败'+data.code);
-                        }
-                    }
-                },
-                error: function(){
-                    layer.alert('请求失败');
-                },
-                dataType: 'json'
-            });
-
+        $(function(){
+            var login_bg = $('.login_bg');
+            if (typeof Users_Account != 'underfined') {
+                if (Users_Account != '') {
+                    login_bg.html('');
+                    login_bg.attr('style', 'display:none;');
+                }
+            }
         });
-        
-        $('#verifyimg').click(function(){
-            reflashCode();
-        });
-    });
     </script>
 </head>
 
@@ -110,10 +46,9 @@ if ($_POST) {
         </div>
     </div>
     <div class="banner"></div>
-    
 
-    <div class="login_bg" <?php if (!empty($Users_Account)) {echo 'style="display:none;"';} ?>>
-        <iframe src="http://401.wzw.com/member/login-3jk.php" style="width:100%; height:100%; border:0;" scrolling="no"></iframe>
+    <div class="login_bg">
+        <iframe src="http://401.wzw.com/member/login.php" style="width:100%; height:100%; border:0;" scrolling="no"></iframe>
         <!-- <i class="change_i"></i>
         <div class="form_pc form_con">
             <input type="hidden" id="referrer" value="15420164051">
