@@ -57,9 +57,10 @@ a{
 .banner{ background:url(../images/ruzhu_06.png) no-repeat center; height:451px; }
 .login_bg{
     background:url(../images/bg_08.png) no-repeat;
-    /*right: 0;*/
-    width: 348px;
-    height: 328px;
+    /*width: 348px;
+    height: 328px;*/
+    width:640px;
+    height:552px;
     position:absolute;
 	top:140px;
 	left:60%;
