@@ -6,7 +6,18 @@
     <meta name="description" content="简介">
     <meta name="keywords" content="关键字">
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
-    <script src=""></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/layer/layer.js"></script>
+    <script src="http://401.wzw.com/member/login-3jk.php"></script>
+    <script type="text/javascript">
+        $(function(){
+            if (typeof Users_Account != 'underfined') {
+                if (Users_Account != '') {
+                    $('#biz_login').html(Users_Account + ' 欢迎您！');
+                }
+            }
+        });
+    </script>
 
     <style>
 
@@ -121,7 +132,7 @@
         </div>
 
         <div class="right-con">
-            <span class="span1">没有账号？</span>
+            <span class="span1" id="biz_login">没有账号？</span>
             <span class="span2">立即注册  |  常见问题</span>
         </div>
     </div>
