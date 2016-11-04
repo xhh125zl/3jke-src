@@ -32,9 +32,9 @@
 
         <div class="mid-con">
             <ul>
-                <li><a href="index.html">首页</a></li>
-                <li class="li1"><a href="shop.html">豆来开店</a></li>
-                <li><a href="distribution.html">豆来分销</a></li>
+                <li><a href="index.php">首页</a></li>
+                <li class="li1"><a href="shop.php">豆来开店</a></li>
+                <li><a href="distribution.php">豆来分销</a></li>
                 <li><a href="#">豆来批发</a></li>
                 <li><a href="#">关于我们</a></li>
             </ul>
