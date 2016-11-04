@@ -1,3 +1,6 @@
+<?php
+    require_once 'const.php';
+?>
 <!doctype html>
 <html>
 <head>
@@ -5,10 +8,10 @@
     <title>webrx-title</title>
     <meta name="description" content="简介">
     <meta name="keywords" content="关键字">
-    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css?t=<?php echo time(); ?>"/>
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/layer/layer.js"></script>
-    <script src="http://401.wzw.com/member/login-3jk.php"></script>
+    <script src="<?php echo rtrim(SHOP_URL, '/'); ?>/member/login-3jk.php"></script>
     <script type="text/javascript">
         $(function(){
             var login_bg = $('.login_bg');
@@ -32,9 +35,9 @@
 
             <div class="mid-con">
                 <ul>
-                    <li class="li1"><a href="index.html">首页</a></li>
-                    <li><a href="shop.html">豆来开店</a></li>
-                    <li><a href="distribution.html">豆来分销</a></li>
+                    <li class="li1"><a href="index.php">首页</a></li>
+                    <li><a href="shop.php">豆来开店</a></li>
+                    <li><a href="distribution.php">豆来分销</a></li>
                     <li><a href="javascript:;">豆来批发</a></li>
                     <li><a href="javascript:;">关于我们</a></li>
                 </ul>
@@ -49,7 +52,7 @@
     <div class="banner"></div>
 
     <div class="login_bg">
-        <iframe src="http://401.wzw.com/member/login.php" style="width:100%; height:100%; border:0;" scrolling="no"></iframe>
+        <iframe src="<?php echo rtrim(SHOP_URL, '/'); ?>/member/login.php" style="width:100%; height:100%; border:0;" scrolling="no"></iframe>
         <!-- <i class="change_i"></i>
         <div class="form_pc form_con">
             <input type="hidden" id="referrer" value="15420164051">
