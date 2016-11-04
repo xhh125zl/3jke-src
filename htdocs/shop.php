@@ -1,3 +1,6 @@
+<?php
+    require_once 'const.php';
+?>
 <!doctype html>
 <html>
 <head>
@@ -8,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/layer/layer.js"></script>
-    <script src="http://401.wzw.com/member/login-3jk.php"></script>
+    <script src="<?php echo rtrim(SHOP_URL, '/'); ?>/member/login-3jk.php"></script>
     <script type="text/javascript">
         $(function(){
             if (typeof Users_Account != 'underfined') {
