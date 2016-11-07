@@ -15,7 +15,7 @@
     <script type="text/javascript">
         $(function(){
             var login_bg = $('.login_bg');
-            if (typeof Users_Account != 'underfined') {
+            if ("underfined" != typeof Users_Account) {
                 if (Users_Account != '') {
                     login_bg.html('');
                     login_bg.attr('style', 'display:none;');

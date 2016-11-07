@@ -129,14 +129,14 @@
                 <li><a href="index.php">首页</a></li>
                 <li><a href="shop.php">豆来开店</a></li>
                 <li class="li1"><a href="distribution.php">豆来分销</a></li>
-                <li><a href="#">豆来批发</a></li>
-                <li><a href="#">关于我们</a></li>
+                <li><a href="javascript:;">豆来批发</a></li>
+                <li><a href="javascript:;">关于我们</a></li>
             </ul>
         </div>
 
         <div class="right-con">
-            <span class="span1" id="biz_login">没有账号？</span>
-            <span class="span2">立即注册  |  常见问题</span>
+            <span class="span2" id="biz_login">没有账号？  |  立即注册</span>
+            <span class="span1">常见问题</span>
         </div>
     </div>
 </div>
@@ -160,7 +160,7 @@
                     <h5>全国<span>最</span>便宜的分销系统</h5>
 
                     <div class="tu">
-                        <a href="#"><i ico-solution1></i></a>
+                        <a href="javascript:;"><i ico-solution1></i></a>
                     </div>
 
                     <p>7800元 / 年为什么这么便宜？<br>
@@ -175,7 +175,7 @@
                     <h5>销量<span>最</span>好的分销系统</h5>
 
                     <div class="tu">
-                        <a href="#"><i class="ico-solution2"></i></a>
+                        <a href="javascript:;"><i class="ico-solution2"></i></a>
                     </div>
 
                     <p>不仅开通自己店铺还将产品同步<br>
@@ -190,7 +190,7 @@
                     <h5>销量<span>最</span>好的分销系统</h5>
 
                     <div class="tu">
-                        <a href="#"><i class="ico-solution3"></i></a>
+                        <a href="javascript:;"><i class="ico-solution3"></i></a>
                     </div>
 
                     <p>5000家用户使用4年<br>
@@ -317,12 +317,12 @@
     <div class="guanggao-con">
         <div class="left-g">
             <p>没货源，想开店</p>
-            <a href="#">立即进入豆来批发</a>
+            <a href="javascript:;">立即进入豆来批发</a>
         </div>
 
         <div class="right-g">
             <p>有货源，要供货</p>
-            <a href="#">立即进入豆来批发</a>
+            <a href="javascript:;">立即进入豆来批发</a>
         </div>
     </div>
 </div>
@@ -338,21 +338,21 @@
         <div class="f-mid">
 
             <ul class="ul1 ul">
-                <li class="li1"><a href="#">关于我们</a></li>
-                <li><a href="#">加入豆来</a></li>
-                <li><a href="#">关于豆来</a></li>
+                <li class="li1"><a href="javascript:;">关于我们</a></li>
+                <li><a href="javascript:;">加入豆来</a></li>
+                <li><a href="javascript:;">关于豆来</a></li>
             </ul>
 
             <ul class="ul3 ul">
-                <li class="li1"><a href="#">联系我们</a></li>
-                <li><a href="#">联系我们</a></li>
-                <li><a href="#">自主解答</a></li>
+                <li class="li1"><a href="javascript:;">联系我们</a></li>
+                <li><a href="javascript:;">联系我们</a></li>
+                <li><a href="javascript:;">自主解答</a></li>
             </ul>
 
             <ul class="ul3 ul">
-                <li class="li1"><a href="#">新手指南</a></li>
-                <li><a href="#">使用帮助</a></li>
-                <li><a href="#">售后服务</a></li>
+                <li class="li1"><a href="javascript:;">新手指南</a></li>
+                <li><a href="javascript:;">使用帮助</a></li>
+                <li><a href="javascript:;">售后服务</a></li>
             </ul>
 
             <p>Copyright:emoji:2012-2016 网中网科技 版权所有 豫ICP备12014703号-2</p>
