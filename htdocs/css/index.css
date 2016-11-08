@@ -308,13 +308,15 @@ a{
 top:-90px; font:normal 20px "微软雅黑"; right:130px; line-height:54px;}
 .sec-con a:hover{ color:#F8FF0F;}
 
+
+/* 开店 */
 .youshi{ width:100%; margin:0 auto; background:#f5f4f4; height:415px; margin-top:40px;}
 .youshi-con1{ width:1100px; margin:0 auto;}
-.youshi-con1 .img{ display:block; margin:0 auto; position:relative; top:30px;width:333px; height:52px;}
+.youshi-con1 .img{ display:block; margin:0 auto; position:relative; top:30px; width:333px; height:52px;}
 .youshi-con1 ul{ position:relative; top:50px;width:1100px; height:275px;}
 .youshi-con1 ul li{ list-style:none; margin-left:28px; float:left; background:url(../images/bg_05.png) no-repeat center; width:232px; height:275px;}
-.youshi-con1 ul li img{ display:block; margin:0 auto; margin-top:45px;}
-.youshi-con1 ul li p{ color:#1e1d1d; font:normal 18px "微软雅黑"; text-align:left; margin-top:70px; width:190px; margin-left:25px; line-height:25px;}
+.youshi-con1 ul li img{ display:block; margin:0 auto; margin-top:45px; height:70px; }
+.youshi-con1 ul li p{ color:#1e1d1d; font:normal 18px "微软雅黑"; text-align:center; margin-top:65px; width:232px; line-height:25px;}
 .youshi-con1 ul li:hover{ background:url(../images/bg_03.png) no-repeat center; cursor:pointer;}
 .youshi-con1 ul li:hover p{color:#fff;}
 

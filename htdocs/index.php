@@ -74,19 +74,19 @@
             <div class="con-con1 wd">
                 <p class="p1">产品库挑选</p>
                 <p class="p2"><span>适合：</span>没有产品，想开分销商城的用户，不能发布自己的产品，只能代销。</p>
-                <a href="javascript:;">立即进入</a>
+                <a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/member/">立即进入</a>
             </div>
 
             <div class="con-con2 wd">
                 <p class="p1">开通官方分销商城</p>
                 <p class="p2"><span>适合：</span>有产品，可绑定自己的微信公众号，独立运营，同时还可以把产品推荐到产品库，同其他代销。</p>
-                <a href="javascript:;">立即进入</a>
+                <a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/member/">立即进入</a>
             </div>
 
             <div class="con-con3 wd">
                 <p class="p1">供货商，只供货</p>
                 <p class="p2"><span>适合：</span>只向平台提供货源，不做自己的独立的店铺</p>
-                <a href="javascript:;">立即进入</a>
+                <a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/member/">立即进入</a>
             </div>
         </div>
     </div>

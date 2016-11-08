@@ -136,7 +136,7 @@
 
         <div class="right-con">
             <span class="span2" id="biz_login"><a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/reg.php">没有账号？  |  立即注册</a></span>
-            <span class="span1">常见问题</span>
+            <span class="span1"><a href="javascript:;">常见问题</a></span>
         </div>
     </div>
 </div>
@@ -317,12 +317,12 @@
     <div class="guanggao-con">
         <div class="left-g">
             <p>没货源，想开店</p>
-            <a href="javascript:;">立即进入豆来批发</a>
+            <a href="<?php echo rtrim(SHOP_URL, '/'); ?>/reg.php">立即进入豆来批发</a>
         </div>
 
         <div class="right-g">
             <p>有货源，要供货</p>
-            <a href="javascript:;">立即进入豆来批发</a>
+            <a href="<?php echo rtrim(SHOP_URL, '/'); ?>/reg.php">立即进入豆来批发</a>
         </div>
     </div>
 </div>

@@ -41,8 +41,8 @@
         </div>
 
         <div class="right-con">
-           <span class="span2" id="biz_login"><a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/reg.php">没有账号？  |  立即注册</a></span>
-            <span class="span1">常见问题</span>
+            <span class="span2" id="biz_login"><a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/reg.php">没有账号？  |  立即注册</a></span>
+            <span class="span1"><a href="javascript:;">常见问题</a></span>
         </div>
     </div>
 </div>
@@ -50,7 +50,7 @@
 <div class="second">
     <div class="sec-con">
         <img src="images/s_05.png">
-        <a href="javascript:;">立即注册开店</a>
+        <a href="<?php echo rtrim(SHOP_URL, '/'); ?>/reg.php">立即注册开店</a>
     </div>
 </div>
 
@@ -60,25 +60,22 @@
         <ul>
             <li>
                 <img src="images/tu_07.png">
-                <p>人人都能成为分销商
-                    分销您的产品及业务</p>
+                <p>人人都能成为分销商<br>分销您的产品及业务</p>
             </li>
 
             <li>
                 <img src="images/tu_10.png">
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;裂变式营销 </p>
+                <p>裂变式营销 </p>
             </li>
 
             <li>
                 <img src="images/tu_13.png">
-                <p>自助计算佣金提成
-                    自助分账店主无忧</p>
+                <p>自助计算佣金提成<br>自助分账店主无忧</p>
             </li>
 
             <li>
                 <img src="images/tu_15.png">
-                <p>绑定微信公众号
-                    让粉丝迅速暴增</p>
+                <p>绑定微信公众号<br>让粉丝迅速暴增</p>
             </li>
         </ul>
     </div>
@@ -140,19 +137,18 @@
     <div class="guanggao-con">
         <div class="left-g">
             <p>没货源，想开店</p>
-            <a href="javascript:;">立即进入豆来批发</a>
+            <a href="<?php echo rtrim(SHOP_URL, '/'); ?>/reg.php">立即进入豆来批发</a>
         </div>
 
         <div class="right-g">
             <p>有货源，要供货</p>
-            <a href="javascript:;">立即进入豆来批发</a>
+            <a href="<?php echo rtrim(SHOP_URL, '/'); ?>/reg.php">立即进入豆来批发</a>
         </div>
     </div>
 </div>
 
 <!--——————————————————footer开始————————————————————————-->
 
-</div>
 <div class="footer">
     <div class="footer-con">
 
