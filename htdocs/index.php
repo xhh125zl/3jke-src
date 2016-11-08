@@ -19,7 +19,7 @@
                 if (Users_Account != '') {
                     login_bg.html('');
                     login_bg.attr('style', 'display:none;');
-                    $('#biz_login').html(Users_Account + ' 欢迎您！');
+                    $('#biz_login').html('<a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/member">' + Users_Account + ' 欢迎您！');
                 }
             }
         });
@@ -44,7 +44,7 @@
             </div>
 
             <div class="right-con">
-                <span class="span2" id="biz_login"><a href="javascript:;">没有账号？</a>  |  <a href="javascript:;">立即注册</a></span>
+                <span class="span2" id="biz_login"><a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/reg.php">没有账号？  |  立即注册</a></span>
                 <span class="span1"><a href="javascript:;">常见问题</a></span>
             </div>
         </div>

@@ -14,9 +14,9 @@
     <script src="<?php echo rtrim(SHOP_URL, '/'); ?>/member/login-3jke.php"></script>
     <script type="text/javascript">
         $(function(){
-            if (typeof Users_Account != 'underfined') {
+            if ("underfined" != typeof Users_Account) {
                 if (Users_Account != '') {
-                    $('#biz_login').html(Users_Account + ' 欢迎您！');
+                    $('#biz_login').html('<a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/member">' + Users_Account + ' 欢迎您！');
                 }
             }
         });
@@ -135,7 +135,7 @@
         </div>
 
         <div class="right-con">
-            <span class="span2" id="biz_login">没有账号？  |  立即注册</span>
+            <span class="span2" id="biz_login"><a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/reg.php">没有账号？  |  立即注册</a></span>
             <span class="span1">常见问题</span>
         </div>
     </div>
