@@ -11,15 +11,15 @@
     <link rel="stylesheet" type="text/css" href="css/index.css?t=<?php echo time(); ?>"/>
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/layer/layer.js"></script>
-    <script src="<?php echo rtrim(SHOP_URL, '/'); ?>/member/login-3jk.php"></script>
+    <script src="<?php echo rtrim(SHOP_URL, '/'); ?>/member/login-3jke.php"></script>
     <script type="text/javascript">
         $(function(){
             var login_bg = $('.login_bg');
-            if (typeof Users_Account != 'underfined') {
+            if ("underfined" != typeof Users_Account) {
                 if (Users_Account != '') {
                     login_bg.html('');
                     login_bg.attr('style', 'display:none;');
-                    $('#biz_login').html(Users_Account + ' 欢迎您！');
+                    $('#biz_login').html('<a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/member">' + Users_Account + ' 欢迎您！');
                 }
             }
         });
@@ -44,7 +44,7 @@
             </div>
 
             <div class="right-con">
-                <span class="span2" id="biz_login"><a href="javascript:;">没有账号？</a>  |  <a href="javascript:;">立即注册</a></span>
+                <span class="span2" id="biz_login"><a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/reg.php">没有账号？  |  立即注册</a></span>
                 <span class="span1"><a href="javascript:;">常见问题</a></span>
             </div>
         </div>
@@ -53,40 +53,6 @@
 
     <div class="login_bg">
         <iframe src="<?php echo rtrim(SHOP_URL, '/'); ?>/member/login.php" style="width:100%; height:100%; border:0;" scrolling="no"></iframe>
-        <!-- <i class="change_i"></i>
-        <div class="form_pc form_con">
-            <input type="hidden" id="referrer" value="15420164051">
-            <p class="p3">登录</p>
-            <form class="c_form" id="signupForm" style="display: block;">
-                <div class="c_re_lab">
-                    <span class="c_phone_icon"></span>
-                    <input type="text" id="mobiePhone" name="Account" size="11" maxlength="11" onkeyup="value=value.replace(&#39; &#39;,&#39;&#39;)" autocomplete="off" class="border" placeholder="请输入手机号">
-                    <i style="background:;"></i>
-                    <p class="b_error" id="mobileTips" style="display: none;">请输入手机号码</p>
-                </div>
-
-                <div class="c_re_lab">
-                    <span class="c_pass_icon"></span>
-                    <input type="password" id="password" name="password" size="25" maxlength="16" placeholder="密码 8-20位 必须包含数字 字母">
-                    <i></i>
-                </div>
-                <div class="c_re_lab2">
-                    <span class="c_yzm_icon"></span>
-                    <input type="text" id="code" name="VerifyCode" size="25" maxlength="16" placeholder="请输入验证码">
-                    <span class="yzm"><img id="verifyimg" class="verifyimg" style="width:104px;height:36px;"></span>
-                </div>
-                <div class="che_xx">
-                    <span class="left">
-                        <label class="checkbox"><input type="checkbox" checked="" name="agree">记住用户名</label>
-                    </span>
-                    <span class="right">
-                         <a href="javascript:;">忘记密码？</a>  |  <a href="javascript:;">免费注册</a>
-                    </span>
-                </div>
-                <div class="clear"></div>
-                <input type="button" value="立即登录" class="sub">
-            </form>
-        </div> -->
     </div>
 
     <div class="gonggao">
