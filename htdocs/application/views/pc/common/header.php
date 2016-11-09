@@ -21,9 +21,9 @@
 
         <div class="mid-con">
             <ul>
-                <li <?php if ($method == '' || $method == 'index') {echo 'class="li1"';} ?>><a href="<?php echo site_url(''); ?>">首页</a></li>
-                <li <?php if ($method == 'shop') {echo 'class="li1"';} ?>><a href="<?php echo site_url('welcome/shop'); ?>">豆来开店</a></li>
-                <li <?php if ($method == 'distribution') {echo 'class="li1"';} ?>><a href="<?php echo site_url('welcome/distribution'); ?>">豆来分销</a></li>
+                <li <?php if ($action == '' or $action == 'welcome') {echo 'class="li1"';} ?>><a href="<?php echo base_url(); ?>">首页</a></li>
+                <li <?php if ($action == 'shop') {echo 'class="li1"';} ?>><a href="<?php echo base_url('shop'); ?>">豆来开店</a></li>
+                <li <?php if ($action == 'distribution') {echo 'class="li1"';} ?>><a href="<?php echo base_url('distribution'); ?>">豆来分销</a></li>
                 <li><a href="javascript:;">豆来批发</a></li>
                 <li><a href="javascript:;">关于我们</a></li>
             </ul>

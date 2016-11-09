@@ -111,12 +111,12 @@
 
         <div class="left-an">
             <p>没货源，想开店</p>
-            <a href="#">立即进入豆来批发</a>
+            <a href="<?php echo rtrim(B2C_URL, '/'); ?>/user/admin.php?act=store">立即进入豆来批发</a>
         </div>
 
         <div class="right-an">
             <p>有货源，要供货</p>
-            <a href="#">立即进入豆来批发</a>
+            <a href="<?php echo rtrim(B2C_URL, '/'); ?>/user/admin.php?act=store">立即进入豆来批发</a>
         </div>
 
     </div>

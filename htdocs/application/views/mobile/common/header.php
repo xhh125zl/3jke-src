@@ -14,23 +14,26 @@
 <div id="header">
     <div class="logo">
         <h1>
-            <a href="#">
+            <a href="<?php echo base_url(); ?>">
                 <img src="public/images/mobile/ruzhu_03.png" alt="豆来分销"/>
             </a>
         </h1>
     </div>
     <div class="right-a">
-        <p>没有账号&nbsp;&nbsp;<a href="#">立即注册&nbsp;&nbsp;|&nbsp;&nbsp;常见问题</a></p>
+        <p>
+            <a href="<?php echo rtrim(B2C_URL, '/'); ?>/user/reg.php">没有账号&nbsp;|&nbsp;立即注册</a>
+            &nbsp;&nbsp;常见问题
+        </p>
     </div>
 </div>
 
 <div id="nav">
     <div class="nav-con">
         <ul>
-            <li <?php if ($method == '' || $method == 'index') {echo 'class="li1"';} ?>><a href="<?php echo site_url(''); ?>">首页</a></li>
-            <li <?php if ($method == 'shop') {echo 'class="li1"';} ?>><a href="<?php echo site_url('welcome/shop'); ?>">无货源开店</a></li>
-            <li <?php if ($method == 'distribution') {echo 'class="li1"';} ?>><a href="<?php echo site_url('welcome/distribution'); ?>">三级分销平台</a></li>
-            <li><a href="#">有货源要供货</a></li>
+            <li <?php if ($action == '' || $action == 'welcome') {echo 'class="li1"';} ?>><a href="<?php echo site_url(); ?>">首页</a></li>
+            <li <?php if ($action == 'shop') {echo 'class="li1"';} ?>><a href="<?php echo site_url('shop'); ?>">无货源开店</a></li>
+            <li <?php if ($action == 'distribution') {echo 'class="li1"';} ?>><a href="<?php echo site_url('distribution'); ?>">三级分销平台</a></li>
+            <li><a href="javascript:;">有货源要供货</a></li>
         </ul>
     </div>
 </div>

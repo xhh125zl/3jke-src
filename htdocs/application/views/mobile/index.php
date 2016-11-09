@@ -28,7 +28,7 @@
                 <p class="p1">产品库挑选</p>
                 <p class="p2"><span>适合：</span>没有产品，想开分销商城的用<br>
                     户不能发布自己的产品，只能代销</p>
-                <a href="#">立即进入</a>
+                <a href="<?php echo rtrim(B2C_URL, '/'); ?>/user/admin.php?act=store">立即进入</a>
             </div>
         </div>
 
@@ -40,7 +40,7 @@
                 <p class="p1">开通官方分销商城</p>
                 <p class="p2"><span>适合：</span>有产品，可绑定自己微信公众号，独立<br>
                     运营，还可把产品推荐到产品库，同其他代销</p>
-                <a href="#">立即进入</a>
+                <a href="<?php echo rtrim(B2C_URL, '/'); ?>/user/admin.php?act=store">立即进入</a>
             </div>
         </div>
 
@@ -52,7 +52,7 @@
             <div id="pp">
                 <p class="p1">供货商，只供货</p>
                 <p class="p2"><span>适合：</span>只向平台提供货源，不做自己独立店铺</p>
-                <a href="#">立即进入</a>
+                <a href="<?php echo rtrim(B2C_URL, '/'); ?>/user/admin.php?act=store">立即进入</a>
             </div>
         </div>
     </div>

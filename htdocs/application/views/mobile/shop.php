@@ -13,7 +13,7 @@
             <div class="right-con">
                 <p class="p1">无需投入任何成本，一键生成分销店铺</p>
                 <p class="p2">上万种商品一键上架，无需进货，无需发货</p>
-                <a href="#"><img src="public/images/mobile/ss_03.png"></a>
+                <a href="<?php echo rtrim(B2C_URL, '/'); ?>/user/reg.php"><img src="public/images/mobile/ss_03.png"></a>
             </div>
 
         </div>
@@ -103,12 +103,12 @@
 
         <div class="left-an">
             <p>没货源，想开店</p>
-            <a href="#">立即进入豆来批发</a>
+            <a href="<?php echo rtrim(B2C_URL, '/'); ?>/user/admin.php?act=store">立即进入豆来批发</a>
         </div>
 
         <div class="right-an">
             <p>有货源，要供货</p>
-            <a href="#">立即进入豆来批发</a>
+            <a href="<?php echo rtrim(B2C_URL, '/'); ?>/user/admin.php?act=store">立即进入豆来批发</a>
         </div>
     </div>
 
