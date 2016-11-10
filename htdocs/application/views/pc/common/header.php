@@ -32,7 +32,7 @@
 
         <div class="right-con">
             <span class="span2" id="biz_login"><a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/reg.php">没有账号？ | 立即注册</a></span>
-            <span class="span1"><a href="javascript:;">常见问题</a></span>
+            <span class="span1"><a href="#question">常见问题</a></span>
         </div>
     </div>
 </div>

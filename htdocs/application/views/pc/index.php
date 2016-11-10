@@ -125,7 +125,7 @@
     </div>
 
     <br>
-    <div class="wenti">
+    <div class="wenti" id="question">
         <div class="wenti-con">
             <img src="public/images/pc/ruzhu_42.png">
         </div>

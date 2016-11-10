@@ -23,7 +23,7 @@
     <div class="right-a">
         <p>
             <a href="<?php echo rtrim(B2C_URL, '/'); ?>/user/reg.php">没有账号&nbsp;|&nbsp;立即注册</a>
-            &nbsp;&nbsp;常见问题
+            &nbsp;&nbsp;<a href="#question" style="color:#3e3c3c;">常见问题</a>
         </p>
     </div>
 </div>
