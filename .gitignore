@@ -1,5 +1,7 @@
 .DS_Store
 
+/htdocs/index.php
+
 /htdocs/application/config/config.php
 /htdocs/application/config/database.php
 
