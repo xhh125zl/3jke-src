@@ -1,1 +1,16 @@
-﻿/htdocs/const.php
+.DS_Store
+
+/htdocs/index.php
+
+/htdocs/application/config/config.php
+/htdocs/application/config/database.php
+
+/htdocs/application/cache/*
+!htdocs/application/cache/index.html
+!htdocs/application/cache/.htaccess
+
+/htdocs/application/logs/*
+!htdocs/application/logs/index.html
+!htdocs/application/logs/.htaccess
+
+.idea/*
