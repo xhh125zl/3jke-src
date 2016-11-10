@@ -21,6 +21,12 @@ class Welcome extends MY_Controller {
 
 	public function index()
 	{
+		$catgory_id = 3;	//公司动态
+		$data['company_news'] = $this->db
+									->where(array('catgory_id' => $catgory_id, 'status' => 1))
+                                    ->order_by('addtime desc')
+                                    ->get('study')
+                                    ->result_array();
 		$data['webTitle'] = '豆来网';
 
 		//判断是否为手机登录

@@ -1,18 +1,5 @@
 <?php $this->load->view('pc/common/header'); ?>
 
-    <script type="text/javascript">
-        $(function () {
-            var login_bg = $('.login_bg');
-            if ("underfined" != typeof Users_Account) {
-                if (Users_Account != '') {
-                    login_bg.html('');
-                    login_bg.attr('style', 'display:none;');
-                    $('#biz_login').html('<a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/member">' + Users_Account + ' 欢迎您！');
-                }
-            }
-        });
-    </script>
-
     <div class="banner"></div>
 
     <div class="login_bg">
@@ -21,9 +8,11 @@
 
     <div class="gonggao">
         <div class="gonggao-con">
-            <span>微信支付开启智慧生活</span>
-            <span>微信支付开启智慧生活</span>
-            <span>微信支付开启智慧生活</span>
+            <?php if (! empty($company_news)): ?>
+                <?php foreach ($company_news as $k => $v): ?>
+                <a target="_blank" href="http://www.netcnnet.net/study/company_news/<?php echo $v['study_id']; ?>.html"><span><?php echo mb_substr($v['title'], 0, 10, 'utf-8'); ?></span></a>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
     </div>
 
@@ -167,5 +156,18 @@
 
         </div>
     </div>
+
+    <script type="text/javascript">
+        $(function () {
+            var login_bg = $('.login_bg');
+            if ("underfined" != typeof Users_Account) {
+                if (Users_Account != '') {
+                    login_bg.html('');
+                    login_bg.attr('style', 'display:none;');
+                    $('#biz_login').html('<a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/member">' + Users_Account + ' 欢迎您！');
+                }
+            }
+        });
+    </script>
 
 <?php $this->load->view('pc/common/footer'); ?>

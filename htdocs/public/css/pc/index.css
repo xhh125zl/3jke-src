@@ -48,7 +48,7 @@ a {
     display: inline-block;
     position: relative;
     top: 34px;
-    left: 9%;
+    left: 3%;
 }
 
 .nav .mid-con ul {
@@ -197,6 +197,7 @@ a {
     background: url(../../images/pc/bgb_03.png) no-repeat center;
     display: block;
     height: 41px;
+    overflow:hidden;
 }
 
 .gonggao .gonggao-con span {

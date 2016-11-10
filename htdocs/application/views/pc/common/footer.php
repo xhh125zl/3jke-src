@@ -25,7 +25,7 @@
                 <li><a href="javascript:;">售后服务</a></li>
             </ul>
 
-            <p>Copyright:emoji:2012-2016 网中网科技 版权所有 豫ICP备12014703号-2</p>
+            <p>Copyright:emoji:2012-2016 <a target="_blank" href="http://www.netcnnet.net/" style="color:#e0dbdb;">网中网科技</a> 版权所有 豫ICP备12014703号-2</p>
         </div>
 
         <div class="f-right">

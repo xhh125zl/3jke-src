@@ -17,7 +17,7 @@
 <div class="nav">
     <div class="nav-con">
         <div class="left-con">
-            <img src="public/images/pc/ruzhu_03.png">
+            <a href=""><img src="public/images/pc/ruzhu_03.png"></a>
         </div>
 
         <div class="mid-con">
@@ -26,7 +26,8 @@
                 <li <?php echo $action == 'shop' ? 'class="li1"' : ''; ?>><a href="shop">豆来开店</a></li>
                 <li <?php echo $action == 'distribution' ? 'class="li1"' : ''; ?>><a href="distribution">豆来分销</a></li>
                 <li><a href="javascript:;">豆来批发</a></li>
-                <li><a href="javascript:;">关于我们</a></li>
+                <li><a href="http://www.netcnnet.net/study/guide/">学习中心</a></li>
+                <li><a target="_blank" href="http://www.netcnnet.net/about/">关于我们</a></li>
             </ul>
         </div>
 

@@ -34,7 +34,7 @@
     </div>
 
     <div class="beian">
-        <p>Copyright:emoji:2012-2016 网中网科技 版权所有 豫ICP备12014703号-2</p>
+        <p>Copyright:emoji:2012-2016 <a href="http://www.netcnnet.net/" style="color:#e0dbdb;">网中网科技</a> 版权所有 豫ICP备12014703号-2</p>
     </div>
 
 </div>
