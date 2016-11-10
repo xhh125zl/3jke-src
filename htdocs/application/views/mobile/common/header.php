@@ -1,11 +1,12 @@
-<base href="<?php  echo base_url();?>"/>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title><?php echo isset($webTitle) && $webTitle != '' ? $webTitle : '豆来网'; ?></title>
+    <meta name="keywords" content="分销_商家入驻_开店_豆来网">
     <meta name="description" content="简介">
-    <meta name="keywords" content="关键字">
+
+    <base href="<?php echo base_url(); ?>"/>
     <link rel="stylesheet" type="text/css" href="public/css/mobile/index.css?t=<?php echo time(); ?>"/>
 </head>
 
@@ -30,9 +31,9 @@
 <div id="nav">
     <div class="nav-con">
         <ul>
-            <li <?php if ($action == '' || $action == 'welcome') {echo 'class="li1"';} ?>><a href="<?php echo site_url(); ?>">首页</a></li>
-            <li <?php if ($action == 'shop') {echo 'class="li1"';} ?>><a href="<?php echo site_url('shop'); ?>">无货源开店</a></li>
-            <li <?php if ($action == 'distribution') {echo 'class="li1"';} ?>><a href="<?php echo site_url('distribution'); ?>">三级分销平台</a></li>
+            <li <?php echo ($action == '' or $action == 'welcome') ? 'class="li1"' : ''; ?>><a href="">首页</a></li>
+            <li <?php echo $action == 'shop' ? 'class="li1"' : ''; ?>><a href="shop">无货源开店</a></li>
+            <li <?php echo $action == 'distribution' ? 'class="li1"' : ''; ?>><a href="distribution">三级分销平台</a></li>
             <li><a href="javascript:;">有货源要供货</a></li>
         </ul>
     </div>

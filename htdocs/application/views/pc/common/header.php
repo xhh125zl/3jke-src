@@ -1,11 +1,12 @@
-<base href="<?php  echo base_url();?>"/>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title><?php echo isset($webTitle) && $webTitle != '' ? $webTitle : '豆来网'; ?></title>
+    <meta name="keywords" content="分销_商家入驻_开店_豆来网">
     <meta name="description" content="简介">
-    <meta name="keywords" content="关键字">
+
+    <base href="<?php echo base_url(); ?>"/>
     <link rel="stylesheet" type="text/css" href="public/css/pc/index.css?t=<?php echo time(); ?>"/>
     <script src="public/js/jquery-1.11.3.min.js"></script>
     <script src="public/js/layer/layer.js"></script>
@@ -21,9 +22,9 @@
 
         <div class="mid-con">
             <ul>
-                <li <?php if ($action == '' or $action == 'welcome') {echo 'class="li1"';} ?>><a href="<?php echo base_url(); ?>">首页</a></li>
-                <li <?php if ($action == 'shop') {echo 'class="li1"';} ?>><a href="<?php echo base_url('shop'); ?>">豆来开店</a></li>
-                <li <?php if ($action == 'distribution') {echo 'class="li1"';} ?>><a href="<?php echo base_url('distribution'); ?>">豆来分销</a></li>
+                <li <?php echo ($action == '' or $action == 'welcome') ? 'class="li1"' : ''; ?>><a href="">首页</a></li>
+                <li <?php echo $action == 'shop' ? 'class="li1"' : ''; ?>><a href="shop">豆来开店</a></li>
+                <li <?php echo $action == 'distribution' ? 'class="li1"' : ''; ?>><a href="distribution">豆来分销</a></li>
                 <li><a href="javascript:;">豆来批发</a></li>
                 <li><a href="javascript:;">关于我们</a></li>
             </ul>
