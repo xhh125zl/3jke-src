@@ -6,12 +6,14 @@
     font-family: "微软雅黑";
 }
 
-li {
+ul, li, dt, dd, ol, dl {
     list-style: none;
 }
 
 a {
+    color:#333;
     text-decoration: none;
+    outline: none;
 }
 
 .left {

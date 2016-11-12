@@ -41,6 +41,19 @@ class Front_Controller extends CI_Controller {
         
         $data['action'] = $this->uri->segment(1);
         $data['method'] = $this->uri->segment(2);
+
+        //获取产品信息
+        $data['product'] = $this->db->order_by('order, product_id')->get('product')->result_array();
+   
+        //获取公司信息
+        $data['company_info'] = $this->db->where(array('user_id' => 0))->get('company_info')->row_array();
+
+        //获取公司面貌信息
+        $data['company_face'] = $this->db->where(array('face_status' => 1))->order_by('order desc')->limit(6)->get('company_face')->result_array();
+
+        //获取公司服务qq
+        $data['serve_qq'] = $this->db->where(array('company_id' => $data['company_info']['company_id']))->where(array('serve_status' => 1))->get('serve_qq')->result_array();
+
         $this->load->vars($data);
     }
     
