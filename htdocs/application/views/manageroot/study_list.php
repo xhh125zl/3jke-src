@@ -17,7 +17,7 @@
       <select  class="form-control" name="catgory_id">
         <option value="">请选择分类</option>
         <option value="3">公司动态</option>
-        <option value="7">常见问题</option>
+        <!-- <option value="6">常见问题</option> -->
       </select>
       <input class="input-large" type="text" name="keyword" value="<?php if(!empty($keyword)): ?><?php echo $keyword; ?><?php endif; ?>" placeholder="请输入  文档标题 或 文档id" />
       <input class="input-large" type="submit" value="搜索" />
@@ -31,7 +31,6 @@
           <th>分类名称</th>
           <th>文档标题</th>
           <th>点击次数</th>
-          <!-- <th>排序</th> -->
           <th>状态</th>
           <th>操作</th>
         </tr>
@@ -42,9 +41,8 @@
         <tr>
           <td><?php echo $v['study_id']; ?></td>
           <td><?php echo $v['catgory_name']; ?></td>
-          <td><a target="_blank" href="<?php echo base_url(); ?><?php switch($v['catgory_id']){case 3:echo '/company_news/index/'; break; case 6:echo 'question/index/'; break;} ?><?php echo $v['study_id'].'.html'; ?>"><?php echo $v['title']; ?></a></td>
+          <td><a target="_blank" href="<?php echo base_url(); ?><?php switch($v['catgory_id']){case 3:echo '/company_news/index/'; break; /*case 6:echo 'question/index/'; break;*/} ?><?php echo $v['study_id'].'.html'; ?>"><?php echo $v['title']; ?></a></td>
           <td><?php echo $v['click']; ?></td>
-          <!-- <td><input class="span1" type="text" value="<?php echo $v['order']; ?>"></td> -->
           <td><?php if($v['status'] == '1'): ?>启用<?php elseif($v['status'] == '0'): ?>停用<?php endif; ?></td>
           <td><a href="<?php echo site_url('manageroot/study/study_edit/'.$v['study_id']); ?>"><i class="icon-pencil"></i> 编辑</a>　<a href="<?php echo site_url('manageroot/study/study_delete/'.$v['study_id']); ?>"><i class="icon-trash"></i> 删除</a></td>
         </tr>

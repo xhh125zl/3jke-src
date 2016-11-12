@@ -1,29 +1,29 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Company_news extends Front_Controller {
+class Question extends Front_Controller {
 
 	public function index()
 	{
 		$data = $this->keywords();
 		$first_value = intval(explode('.', $this->uri->segment(3))[0]);
         if ($first_value > 0) {
-            $data['study_content'] = $this->db
+            $data['question'] = $this->db
                                     ->where(array('study_id' => $first_value, 'status' => 1))
                                     ->get('study')
                                     ->row_array();
         } else {
-            $catgory_id = 3;
+            $catgory_id = 6;
 
             //解析$p 为分页做准备
             $this->load->library('pagination');
-            $config['base_url'] = site_url('company_news/index/p/');
+            $config['base_url'] = site_url('question/index/p/');
             $config['total_rows'] = $this->db
                                     ->from('study')
                                     ->where(array('catgory_id' => $catgory_id, 'status' => 1))
                                     ->order_by('addtime desc')
                                     ->count_all_results();
-            $config['per_page'] = 10;
+            $config['per_page'] = 15;
             $config['num_links'] = 4;
             $config['uri_segment'] = 4;
 
@@ -61,9 +61,9 @@ class Company_news extends Front_Controller {
             $data['pages'] = $this->pagination->create_links();
         } 
 
-		$data['webTitle'] = '公司动态';
+		$data['webTitle'] = '常见问题';
 
-		$this->load->view('pc/company_news', $data);
+		$this->load->view('pc/question', $data);
 
 		/*//判断是否为手机登录
 		$this->load->library('user_agent');
@@ -104,7 +104,7 @@ class Company_news extends Front_Controller {
         }
 
 		$data = $this->keywords();
-        $like = array('study.title' => $keyword);
+
 		//分页处理
 		$this->load->library('pagination');
 		
@@ -144,7 +144,7 @@ class Company_news extends Front_Controller {
         $data['study_list'] = $this->db
 					            ->from('study')
 					            ->where(array('study.status' => 1))
-					            ->like($like)
+					            ->like(array('study.title' => $keyword))
 					            ->join('study_catgory', 'study.catgory_id = study_catgory.catgory_id')
 					            ->order_by('study.click desc, study.addtime desc')
 					            ->limit($config['per_page'], $page)

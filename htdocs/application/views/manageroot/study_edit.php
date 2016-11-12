@@ -40,7 +40,7 @@
     <div class="controls">
       <select class="span3" name="catgory_id">
         <option value="3">公司动态</option>
-        <option value="6">常见问题</option>
+        <!-- <option value="6">常见问题</option> -->
       </select>
     </div>
   </div>
