@@ -6,12 +6,14 @@
     font-family: "微软雅黑";
 }
 
-li {
+ul, li, dt, dd, ol, dl {
     list-style: none;
 }
 
 a {
+    color:#333;
     text-decoration: none;
+    outline: none;
 }
 
 .left {
@@ -200,15 +202,11 @@ a {
     overflow:hidden;
 }
 
-.gonggao .gonggao-con span {
+.gonggao .gonggao-con a {
     font: normal 17px "微软雅黑";
     color: #313233;
-    margin-left: 100px;
+    margin-right: 100px;
     line-height: 41px;
-}
-
-.gonggao .gonggao-con span:nth-child(1) {
-    margin-left: 200px;
 }
 
 .yewu {

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Distribution extends MY_Controller {
+class Distribution extends Front_Controller {
 
 	public function index()
 	{
