@@ -42,7 +42,7 @@
         <tr>
           <td><?php echo $v['study_id']; ?></td>
           <td><?php echo $v['catgory_name']; ?></td>
-          <td><a target="_blank" href="<?php echo site_url('study'); ?><?php switch($v['catgory_id']){case 3:echo '/company_news'; break; case 4:echo '/trade_news'; break; case 5:echo '/marketing_news'; break; default:echo '/guide';} ?><?php echo '/'.$v['study_id'].'.html'; ?>"><?php echo $v['title']; ?></a></td>
+          <td><a target="_blank" href="<?php echo base_url(); ?><?php switch($v['catgory_id']){case 3:echo '/company_news/index/'; break; case 6:echo 'question/index/'; break;} ?><?php echo $v['study_id'].'.html'; ?>"><?php echo $v['title']; ?></a></td>
           <td><?php echo $v['click']; ?></td>
           <!-- <td><input class="span1" type="text" value="<?php echo $v['order']; ?>"></td> -->
           <td><?php if($v['status'] == '1'): ?>启用<?php elseif($v['status'] == '0'): ?>停用<?php endif; ?></td>

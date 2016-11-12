@@ -41,7 +41,7 @@
     <div class="control-group <?php if(!empty(form_error('order'))): ?>error<?php endif; ?>">
       <label class="control-label" for="order">排序</label>
       <div class="controls">
-        <input class="input-mini" id="order" type="text" name="order" placeholder="排序" value="<?php echo set_value(); ?>">
+        <input class="input-mini" id="order" type="text" name="order" placeholder="排序" value="<?php echo set_value('order'); ?>">
         <?php echo form_error('order'); ?>
       </div>
     </div>
