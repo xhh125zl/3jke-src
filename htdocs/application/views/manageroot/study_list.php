@@ -16,11 +16,8 @@
       </select>
       <select  class="form-control" name="catgory_id">
         <option value="">请选择分类</option>
-        <?php if(!empty($study_catgory)): ?>
-          <?php foreach($study_catgory as $k => $v): ?>
-            <option value="<?php echo $v['catgory_id']; ?>" <?php if(!empty($catgory_id) && $catgory_id == $v['catgory_id']): ?>selected="selected"<?php endif; ?>><?php echo $v['catgory_name']; ?></option>
-          <?php endforeach; ?>
-        <?php endif; ?>
+        <option value="3">公司动态</option>
+        <option value="7">常见问题</option>
       </select>
       <input class="input-large" type="text" name="keyword" value="<?php if(!empty($keyword)): ?><?php echo $keyword; ?><?php endif; ?>" placeholder="请输入  文档标题 或 文档id" />
       <input class="input-large" type="submit" value="搜索" />

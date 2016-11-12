@@ -39,14 +39,8 @@
     <label class="control-label" for="catgory_name">选择分类</label>
     <div class="controls">
       <select class="span3" name="catgory_id">
-        <?php if(!empty($cat_arr)): ?>
-        <?php foreach ($cat_arr as $k => $v): ?>
-        <option value="<?php echo $v['catgory_id']; ?>" <?php if($v['catgory_id'] == $single_info['catgory_id']): ?>selected<?php endif; ?>>
-          <?php echo str_repeat('----', $v['catgory_grade']); ?>
-          <?php echo $v['catgory_name']; ?>
-        </option>
-        <?php endforeach; ?>
-        <?php endif; ?>
+        <option value="3">公司动态</option>
+        <option value="7">常见问题</option>
       </select>
     </div>
   </div>

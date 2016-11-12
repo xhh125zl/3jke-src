@@ -13,10 +13,6 @@
 	li.v span { width: 30%; display: inline-block; text-indent: 10px; height: 30px; line-height: 30px; text-overflow:ellipsis; }
 	li.v span.left { border-right: 1px solid #eee; }
 
-	 table.table {
-            width: 85%;
-            margin-left: 20px;
-        }
 </style>
 <div id="main_center">
 	<h1>后台首页</h1>
@@ -42,41 +38,6 @@
 			<?php endif; ?>
 		</ul>
 	</div>
-	 <table class="table table-striped">
-	        <thead>
-	        <tr><th colspan="7" style="text-align:center; color:red;">首页提交信息列表</th></tr>
-	        <tr>
-	            <th>编号</th>
-	            <th>姓名</th>
-	            <th>电话</th>
-	            <th>邮箱</th>
-	            <th>QQ</th>
-	            <th>地址</th>
-	            <th>添加时间</th>
-	        </tr>
-	        </thead>
-	        <tbody>
-	        <?php if (!empty($join_list)): ?>
-	            <?php foreach ($join_list as $k => $v): ?>
-	                <tr>
-	                    <td><?php echo $v['id']; ?></td>
-	                    <td><?php echo $v['join_name']; ?></td>
-	                    <td><?php echo $v['join_phone']; ?></td>
-	                    <td><?php echo $v['join_email']; ?></td>
-	                    <td><?php echo $v['join_qq']; ?></td>
-	                    <td><?php echo $v['join_address']; ?></td>
-	                    <td><?php echo date('Y-m-d H:i:s',$v['addtime']); ?></td>
-	                </tr>
-	            <?php endforeach; ?>
-	        <?php endif; ?>
-	        </tbody>
-	        <tfoot>
-	        <tr>
-	        	<td colspan="7" style="text-align:center;"><a href="<?php echo site_url('manageroot/join/join_list'); ?>">查看全部动态</a></td>
-	        </tr>
-	        </tfoot>
-
-	    </table>
 
 </div>
 <?php $this->load->view('/manageroot/admin_footer'); ?>
