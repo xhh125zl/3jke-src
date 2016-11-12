@@ -13,7 +13,4 @@
 !htdocs/application/logs/index.html
 !htdocs/application/logs/.htaccess
 
-/htdocs/upload/company/*
-/htdocs/upload/image/*
-/htdocs/upload/study/*
 .idea/*
