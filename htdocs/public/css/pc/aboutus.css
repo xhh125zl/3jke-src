@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* webrx CSS Document */
+
+.banner{ background:url(../../images/pc/jj_02.png) no-repeat center; height:290px; }
+
+.tit1{ width:100%; margin:0 auto;}
+.t1{ width:833px; margin:0 auto; margin-top:40px;}
+
+.jianjie{ width:100%; margin:0 auto;}
+.jianjie-con{ width:1050px; margin:0 auto;}
+.jianjie .jianjie-con img{ display:block; margin-top:40px; margin:0 auto;}
+.jianjie .jianjie-con p{ color:#090909; font:normal 15px "微软雅黑"; text-align:center; line-height:24px; margin-top:20px;}
+
+.wenhau{ width:100%; margin:0 auto; background:url(../../images/pc/bg_04.jpg) no-repeat center; height:340px; margin-top:60px;}
+.wenhau .wenhau-con{ width:850px; margin:0 auto;}
+.wenhau .wenhau-con img{display:block; margin-top:20px; position:relative; top:28px;}
+.wenhau .img-con{ width:1000px; margin:0 auto;}
+.wenhau .img-con div{ display:inline-block; margin-left:110px; margin-top:10px; position:relative; left:-50px; top:40px;}
+
+.lianxi{ width:100%; margin:0 auto; background:#eb3035; height:450px; margin-top:20px;}
+.lianxi-con{ width:1085px; margin:0 auto; position:relative; top:45px;}
+.lianxi .lianxi-con .l-con{ display:inline-block; float:left; width:440px;}
+.lianxi .lianxi-con .l-con p{ margin-top:30px;}
+.lianxi .lianxi-con .l-con p span{color:#fff; font:normal 21px "微软雅黑"; line-height:30px; position:relative; top:-8px; left:22px;}
+.lianxi .lianxi-con .l-con .p4 span{color:#fff; font:normal 21px "微软雅黑"; line-height:30px; position:relative; top:-8px; left:22px;}
+
+.lianxi .lianxi-con .r-con{ display:inline-block; float:right;}

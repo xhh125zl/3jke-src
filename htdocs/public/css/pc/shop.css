@@ -1,0 +1,291 @@
+@charset "utf-8";
+
+/*开店*/
+
+.banner_x {
+    background: url(../../images/pc/banner1_02.jpg) no-repeat center;
+    height: 547px;
+}
+
+.con1 {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.con1 .con-con {
+    width: 670px;
+    margin: 0 auto;
+    display: block;
+}
+
+.con2 {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    background: #f9f8f8;
+    padding: 40px 0px 40px 0px;
+}
+
+.con2 .con-con {
+    width: 670px;
+    margin: 0 auto;
+    display: block;
+}
+
+.con3 {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.con3 .con-con {
+    width: 670px;
+    margin: 0 auto;
+    display: block;
+}
+
+.con3 .con-con .img2 {
+    width: 355px;
+    margin: 0 auto;
+    display: block;
+    margin-left: 150px;
+}
+
+.second {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.sec-con {
+    width: 1021px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.sec-con a {
+    color: #fff;
+    background: url(../../images/pc/anniu_05.png) no-repeat center;
+    width: 220px;
+    height: 54px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    float: right;
+    top: -90px;
+    font: normal 20px "微软雅黑";
+    right: 130px;
+    line-height: 54px;
+}
+
+.sec-con a:hover {
+    color: #F8FF0F;
+}
+
+/* 开店 */
+.youshi {
+    width: 100%;
+    margin: 0 auto;
+    background: #f5f4f4;
+    height: 415px;
+    margin-top: 40px;
+}
+
+.youshi-con1 {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.youshi-con1 .img {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 30px;
+    width: 333px;
+    height: 52px;
+}
+
+.youshi-con1 ul {
+    position: relative;
+    top: 50px;
+    width: 1100px;
+    height: 275px;
+}
+
+.youshi-con1 ul li {
+    list-style: none;
+    margin-left: 28px;
+    float: left;
+    background: url(../../images/pc/bg_05.png) no-repeat center;
+    width: 232px;
+    height: 275px;
+}
+
+.youshi-con1 ul li img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 45px;
+    height: 70px;
+}
+
+.youshi-con1 ul li p {
+    color: #1e1d1d;
+    font: normal 18px "微软雅黑";
+    text-align: center;
+    margin-top: 65px;
+    width: 232px;
+    line-height: 25px;
+}
+
+.youshi-con1 ul li:hover {
+    background: url(../../images/pc/bg_03.png) no-repeat center;
+    cursor: pointer;
+}
+
+.youshi-con1 ul li:hover p {
+    color: #fff;
+}
+
+.tit {
+    width: 100%;
+    margin-top: 60px;
+}
+
+.tit p {
+    font: bold 33px "微软雅黑";
+    color: #031f56;
+    position: relative;
+    text-align: center;
+}
+
+.tit img {
+    display: block;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 15px;
+}
+
+.lizi {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.lizi .lizi-con {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.lizi .lizi-con .left-1 {
+    display: inline-block;
+    float: left;
+    background: url(../../images/pc/hh_03.png) no-repeat center;
+    display: block;
+}
+
+.lizi .lizi-con .l-con {
+    margin-left: 10px;
+    width: 540px;
+    height: 221px;
+}
+
+.lizi .lizi-con .l-con .p1 {
+    font: normal 22px "造字工房朗倩（非商用）细体", "微软雅黑";
+    color: #e64d3d;
+}
+
+.lizi .lizi-con .l-con .p2 {
+    font: normal 16px "微软雅黑";
+    color: #686864;
+    line-height: 27px;
+}
+
+.lizi .lizi-con .right-1 {
+    display: inline-block;
+    float: right;
+    background: url(../../images/pc/hh_05.png) no-repeat center;
+    display: block;
+}
+
+.lizi .lizi-con .left-1 .p {
+    display: block;
+    position: relative;
+    left: 180px;
+    top: 20px;
+}
+
+.lizi .lizi-con .left-1 .p1 {
+    margin-left: 50px;
+    line-height: 60px;
+}
+
+.lizi .lizi-con .right-1 .p {
+    display: block;
+    position: relative;
+    left: 50px;
+    top: 20px;
+}
+
+.lizi .lizi-con .right-1 .p1 {
+    margin-left: 50px;
+    line-height: 60px;
+}
+
+.lizi .lizi-con .left-2 {
+    display: inline-block;
+    float: left;
+    background: url(../../images/pc/hh_031.png) no-repeat center;
+    display: block;
+    margin-top: 20px;
+}
+
+.lizi .lizi-con .l-con {
+    margin-left: 10px;
+    width: 540px;
+    height: 221px;
+}
+
+.lizi .lizi-con .l-con .p1 {
+    font: normal 22px "造字工房朗倩（非商用）细体", "微软雅黑";
+    color: #e64d3d;
+}
+
+.lizi .lizi-con .l-con .p2 {
+    font: normal 16px "微软雅黑";
+    color: #686864;
+    line-height: 27px;
+}
+
+.lizi .lizi-con .right-2 {
+    display: inline-block;
+    float: right;
+    background: url(../../images/pc/hh_051.png) no-repeat center;
+    display: block;
+    margin-top: 20px;
+}
+
+.lizi .lizi-con .left-2 .p {
+    display: block;
+    position: relative;
+    left: 180px;
+    top: 20px;
+}
+
+.lizi .lizi-con .left-2 .p1 {
+    margin-left: 50px;
+    line-height: 60px;
+}
+
+.lizi .lizi-con .right-2 .p {
+    display: block;
+    position: relative;
+    left: 50px;
+    top: 20px;
+}
+
+.lizi .lizi-con .right-2 .p1 {
+    margin-left: 50px;
+    line-height: 60px;
+}

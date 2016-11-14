@@ -1,5 +1,7 @@
 <?php $this->load->view('pc/common/header'); ?>
 
+<link href="public/css/pc/index.css?t=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+
     <div class="banner"></div>
 
     <div class="login_bg">
@@ -8,11 +10,14 @@
 
     <div class="gonggao">
         <div class="gonggao-con">
+            <div class="more_news"><a target="_blank" href="company_news">查看更多 ></a></div>
+            <div class="system_news">
             <?php if (! empty($company_news)): ?>
                 <?php foreach ($company_news as $k => $v): ?>
-                <a target="_blank" href="http://www.netcnnet.net/study/company_news/<?php echo $v['study_id']; ?>.html"><span><?php echo mb_substr($v['title'], 0, 10, 'utf-8'); ?></span></a>
+                <a target="_blank" href="company_news/index/<?php echo $v['study_id']; ?>.html" title="<?php echo $v['title']; ?>"><?php echo mb_substr($v['title'], 0, 10, 'utf-8'); ?></a>
                 <?php endforeach; ?>
             <?php endif; ?>
+            </div>
         </div>
     </div>
 
@@ -156,18 +161,6 @@
 
         </div>
     </div>
-
-    <script type="text/javascript">
-        $(function () {
-            var login_bg = $('.login_bg');
-            if ("underfined" != typeof Users_Account) {
-                if (Users_Account != '') {
-                    login_bg.html('');
-                    login_bg.attr('style', 'display:none;');
-                    $('#biz_login').html('<a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/member">' + Users_Account + ' 欢迎您！');
-                }
-            }
-        });
-    </script>
+    <div class="clear"></div>
 
 <?php $this->load->view('pc/common/footer'); ?>

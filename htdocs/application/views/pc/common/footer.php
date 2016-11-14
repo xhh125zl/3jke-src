@@ -8,7 +8,7 @@
         <div class="f-mid">
 
             <ul class="ul1 ul">
-                <li class="li1"><a href="javascript:;">关于我们</a></li>
+                <li class="li1"><a href="aboutus">关于我们</a></li>
                 <li><a href="javascript:;">加入豆来</a></li>
                 <li><a href="javascript:;">关于豆来</a></li>
             </ul>
@@ -25,12 +25,12 @@
                 <li><a href="javascript:;">售后服务</a></li>
             </ul>
 
-            <p>Copyright:emoji:2012-2016 <a target="_blank" href="http://www.netcnnet.net/" style="color:#e0dbdb;">网中网科技</a> 版权所有 豫ICP备12014703号-2</p>
+            <p>Copyright:emoji:2012-2016 <a target="_blank" href="http://www.netcnnet.net/" style="color:#e0dbdb;">网中网科技</a> 版权所有 <?php echo $company_info['web_record_number']; ?></p>
         </div>
 
         <div class="f-right">
             <img src="public/images/pc/f_10.png">
-            <span>400-0570-881</span>
+            <span><?php echo $company_info['company_contactNum']; ?></span>
         </div>
 
     </div>

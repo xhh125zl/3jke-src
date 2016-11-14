@@ -39,14 +39,8 @@
     <label class="control-label" for="catgory_name">选择栏目</label>
     <div class="controls">
       <select class="span3" name="catgory_id">
-        <?php if(!empty($cat_arr)): ?>
-        <?php foreach ($cat_arr as $k => $v): ?>
-          <?php if($v['catgory_id'] == 2 || $v['parent_id'] == 2): ?>
-          <?php else: ?>
-        <option value="<?php echo $v['catgory_id']; ?>" <?php if($v['catgory_grade'] == 2 || $v['catgory_id'] == 3 || $v['catgory_id'] == 4 || $v['catgory_id'] == 5): ?><?php else: ?>disabled<?php endif; ?>><?php echo str_repeat('----', $v['catgory_grade']); ?><?php echo $v['catgory_name']; ?></option>
-      <?php endif; ?>
-        <?php endforeach; ?>
-        <?php endif; ?>
+        <option value="3">公司动态</option>
+        <!-- <option value="6">常见问题</option> -->
       </select>
     </div>
   </div>

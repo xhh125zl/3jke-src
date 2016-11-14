@@ -33,45 +33,6 @@
 <div id="main_center">
 	<h1>公司设置</h1>
   <?php echo form_open_multipart('manageroot/setting/company_setting', array('class' => 'form-horizontal')); ?>
-    <div class="control-group <?php if(!empty(form_error('company_name'))): ?>error<?php endif; ?>">
-      <label class="control-label" for="company_name">公司名称</label>
-      <div class="controls">
-        <input type="text" id="company_name" name="company_name" value="<?php echo $company_info['company_name']; ?>" class="input-xxlarge" placeholder="公司地址">
-        <?php echo form_error('company_name'); ?>
-      </div>
-    </div>
-
-    <div class="control-group <?php if(!empty(form_error('company_logo'))): ?>error<?php endif; ?>">
-      <label class="control-label" for="company_logo">公司logo</label>
-      <div class="controls">
-        <input class="btn" type="file" name="company_logo">
-        <?php if(!empty($company_info['company_logo'])): ?><img src="<?php echo base_url($company_info['company_logo']); ?>" width="60px" height="30px"><?php endif; ?>
-      </div>
-    </div>
-
-    <div class="control-group <?php if(!empty(form_error('company_slogan'))): ?>error<?php endif; ?>">
-      <label class="control-label" for="company_slogan">公司标语</label>
-      <div class="controls">
-        <input type="text" id="company_slogan" name="company_slogan" value="<?php echo $company_info['company_slogan']; ?>" class="input-xxlarge" placeholder="公司地址">
-        <?php echo form_error('company_slogan'); ?>
-      </div>
-    </div>
-
-    <div class="control-group <?php if(!empty(form_error('company_QRcode1'))): ?>error<?php endif; ?>">
-      <label class="control-label" for="company_QRcode1">公司二维码1</label>
-      <div class="controls">
-        <input class="btn" type="file" name="company_QRcode1">
-        <?php if(!empty($company_info['company_QRcode1'])): ?><img src="<?php echo base_url($company_info['company_QRcode1']); ?>" width="60px" height="30px"><?php endif; ?>
-      </div>
-    </div>
-
-    <div class="control-group <?php if(!empty(form_error('company_QRcode2'))): ?>error<?php endif; ?>">
-      <label class="control-label" for="company_QRcode2">公司二维码2</label>
-      <div class="controls">
-        <input class="btn" type="file" name="company_QRcode2">
-        <?php if(!empty($company_info['company_QRcode2'])): ?><img src="<?php echo base_url($company_info['company_QRcode2']); ?>" width="60px" height="30px"><?php endif; ?>
-      </div>
-    </div>
 
     <div class="control-group <?php if(!empty(form_error('company_address'))): ?>error<?php endif; ?>">
       <label class="control-label" for="company_address">公司地址</label>
