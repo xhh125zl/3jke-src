@@ -43,21 +43,6 @@
       </div>
     </div>
 
-    <!-- <div class="control-group <?php if(!empty(form_error('consult_url'))): ?>error<?php endif; ?>">
-      <label class="control-label" for="consult_url">咨询地址</label>
-      <div class="controls">
-        <input type="text" id="consult_url" name="consult_url" value="<?php echo $company_info['consult_url']; ?>" class="input-xxlarge" placeholder="咨询地址   格式为  http://www.baidu.com  或  www.baidu.com">
-        <?php echo form_error('consult_url'); ?>
-      </div>
-    </div>
-
-    <div class="control-group <?php if(!empty(form_error('online_code'))): ?>error<?php endif; ?>">
-      <label class="control-label" for="online_code">在线交流<br>代码段</label>
-      <div class="controls">
-        <textarea rows="5" style="width:528px;" name="online_code"><?php echo $company_info['online_code']; ?></textarea>
-      </div>
-    </div> -->
-
     <div class="control-group" style="clear:both;">
       <label class="control-label" for="inputOrder"></label>
       <div class="controls">

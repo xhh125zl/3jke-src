@@ -2,7 +2,10 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title><?php echo isset($webTitle) && $webTitle != '' ? $webTitle : '豆来网'; ?></title>
+    <title><?php if (!empty($webtitle)): ?><?php echo $webtitle; ?><?php else: ?><?php echo $company_info['webtitle']; ?><?php endif; ?></title>
+    <meta name="keywords" content="<?php if (!empty($webkeyword)): ?><?php echo $webkeyword; ?><?php else: ?><?php echo $company_info['keywords']; ?><?php endif; ?>">
+    <meta name="description" content="<?php if (!empty($webdesc)): ?><?php echo $webdesc; ?><?php else: ?><?php echo $company_info['webdesc']; ?><?php endif; ?>">
+    <meta name="baidu-site-verification" content="EGxNdoNe1a" />
     <meta name="keywords" content="分销_商家入驻_开店_豆来网">
     <meta name="description" content="简介">
 

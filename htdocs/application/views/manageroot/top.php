@@ -14,9 +14,9 @@
 		<a target="main" href="<?php echo site_url('manageroot/home/main_center'); ?>">后台首页</a>
 	</div>
 	<div class="userinfo">
-		<a href="<?php if($this->session->userdata('role') == 1): ?><?php echo site_url(); ?><?php else: ?><?php echo site_url('/').'?UserId='.$this->session->userdata('loginid'); ?><?php endif; ?>" target="_blank">前台首页</a>
+		<a href="<?php echo site_url(); ?>" target="_blank">前台首页</a>
 		<a href="<?php echo site_url('manageroot/login/login_out'); ?>">退出登录</a>
-		<a>欢迎您：<?php if(!empty($login_info)): ?><?php echo $login_info['user_name']; ?><?php endif; ?>&nbsp;&nbsp;<?php if($role == 1): ?>管理员<?php else: ?>用户<?php endif; ?></a>
+		<a>欢迎您：<?php if(!empty($login_info)): ?><?php echo $login_info['user_name']; ?><?php endif; ?>&nbsp;&nbsp;管理员</a>
 		<a href="<?php echo site_url('manageroot/user/change_psw/'); ?>" target="main">修改密码</a>
 	</div>
 </div>

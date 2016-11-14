@@ -20,17 +20,10 @@ class Home extends MY_Controller {
 	{
 		//获取个人信息
 		$loginid = $this->session->userdata('loginid');
-		$role = $this->session->userdata('role');
 
-		if ($loginid && $role == 1) {	//管理员
+		if ($loginid) {	//管理员
 			$this->load->model('adminuser_model');
 			$data['login_info'] = $this->adminuser_model->get_field_values('admin', 'user_name, last_login_time, last_login_ip, login_nums, addtime', array('id' => $loginid));
-			
-			$data['join_list'] = $this->db->select('*')->where(array('user_id' => 0))->order_by('id desc, addtime desc')->limit('10')->get('join')->result_array();
-		} else if($loginid && $role == 0) {		//用户
-			$this->load->model('adminuser_model');
-			$data['login_info'] = $this->adminuser_model->get_field_values('user', 'user_name, last_login_time, last_login_ip, login_nums, addtime', array('user_id' => $loginid));
-			$data['join_list'] = $this->db->select('*')->where(array('user_id' => $loginid))->order_by('id desc, addtime desc')->limit('10')->get('join')->result_array();
 		} else {
 			redirect(site_url('manageroot/login'));
 		}
@@ -42,28 +35,20 @@ class Home extends MY_Controller {
 	{
 		//获取个人信息
 		$loginid = $this->session->userdata('loginid');
-		$role = $this->session->userdata('role');
 
-		if ($loginid && $role == 1) {	//管理员
+		if ($loginid) {	//管理员
 			$this->load->model('adminuser_model');
 			$data['login_info'] = $this->adminuser_model->get_field_values('admin', 'user_name', array('id' => $loginid));
-		} else if($loginid && $role == 0) {		//用户
-			$this->load->model('adminuser_model');
-			$data['login_info'] = $this->adminuser_model->get_field_values('user', 'user_name', array('user_id' => $loginid));
 		} else {
 			redirect(site_url('manageroot/login'));
 		}
-		$data['role'] = $role;
 		$this->load->view('manageroot/top', $data);
 	}
 
 	public function main_left()
 	{
-		//$data['role'] = $this->session->userdata('role');
 		$this->load->view('manageroot/left');
 	}
-
-
 
 }
 

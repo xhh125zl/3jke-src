@@ -6,7 +6,7 @@
     <div class="second">
         <div class="sec-con">
             <img src="public/images/pc/s_05.png">
-            <a href="<?php echo rtrim(SHOP_URL, '/'); ?>/reg.php">立即注册开店</a>
+            <a id="biz_login">立即注册开店</a>
         </div>
     </div>
 
