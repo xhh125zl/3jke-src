@@ -28,9 +28,9 @@
 .main_right .news{ margin-bottom:20px; width:925px; height:176px; }
 .main_right .news .new_img{ float:left; width:376px; height:175px; border:1px solid #E1E1E1; }
 .main_right .news .new_msg{ float:left; }
-.main_right .news .new_title{ text-align:center; font-size:22px; color:#4C94CA; width:545px; height:60px; line-height:60px; border-top:1px solid #E1E1E1; border-right:1px solid #E1E1E1; border-bottom:1px solid #E1E1E1; overflow:hidden; }
+.main_right .news .new_title{ text-align:center; font-size:18px; color:#4C94CA; width:545px; height:60px; line-height:60px; border-top:1px solid #E1E1E1; border-right:1px solid #E1E1E1; border-bottom:1px solid #E1E1E1; overflow:hidden; }
 .main_right .news .new_title a{color:#4C94CA;}
-.main_right .news .new_content{ text-align:center; font-size:20px; width:545px; height:114px; vertical-align:middle; 
+.main_right .news .new_content{ text-align:center; font-size:18px; width:545px; height:114px; vertical-align:middle; 
 display:table-cell;  border-right:1px solid #E1E1E1; border-bottom:1px solid #E1E1E1; overflow:hidden; }
 
 .a_cover:hover{ color:#019CEC; }
