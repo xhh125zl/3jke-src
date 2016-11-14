@@ -8,7 +8,7 @@ class Question extends Front_Controller {
 		$data = $this->keywords();
 		$first_value = intval(explode('.', $this->uri->segment(3))[0]);
         if ($first_value > 0) {
-            $data['question'] = $this->db
+            $data['question_con'] = $this->db
                                     ->where(array('study_id' => $first_value, 'status' => 1))
                                     ->get('study')
                                     ->row_array();
@@ -50,7 +50,7 @@ class Question extends Front_Controller {
             
             $this->pagination->initialize($config);
 
-            $data['company_news'] = $this->db
+            $data['question'] = $this->db
                                     ->from('study')
                                     ->where(array('catgory_id' => $catgory_id, 'status' => 1))
                                     ->order_by('addtime desc')
@@ -61,7 +61,7 @@ class Question extends Front_Controller {
             $data['pages'] = $this->pagination->create_links();
         } 
 
-		$data['webTitle'] = '常见问题';
+		$data['webtitle'] = '常见问题';
 
 		$this->load->view('pc/question', $data);
 
@@ -77,12 +77,11 @@ class Question extends Front_Controller {
 	public function keywords()
 	{
 		//获取三个关键字
+        $catgory_id = 6;
         $data['search_keywords'] = $this->db
                                     ->from('study')
-                                    ->where(array('study.status' => 1))
-                                    ->join('study_catgory', 'study.catgory_id = study_catgory.catgory_id')
-                                    ->like('study_catgory.catgory_path', '0-1-', 'after')
-                                    ->order_by('study.click desc, study.addtime desc')
+                                    ->where(array('catgory_id' => $catgory_id, 'status' => 1))
+                                    ->order_by('click desc, addtime desc')
                                     ->limit(3)
                                     ->get()
                                     ->result_array();
@@ -91,28 +90,21 @@ class Question extends Front_Controller {
 
 	public function search()
 	{
+        $data = $this->keywords();
+
+        $catgory_id = 6;
+
         $keyword = $data['keyword'] = trim($this->input->get('keyword'));
-
-        if(!empty($keyword)) {
-            //收集搜索关键字
-            $res = $this->db->where(array('search_word' => $keyword))->get('search_keyword')->row_array();
-            if(!empty($res)) {
-                $this->db->where(array('keyword_id' => $res['keyword_id']))->update('search_keyword', array('search_num' => $res['search_num']+1));
-            } else {
-                $this->db->insert('search_keyword', array('search_word' => $keyword));
-            }
-        }
-
-		$data = $this->keywords();
+        $like = array('title' => $keyword);
 
 		//分页处理
 		$this->load->library('pagination');
 		
-        $config['base_url'] = site_url('company_news/search/?keyword='.$keyword);
+        $config['base_url'] = site_url('question/search/?keyword='.$keyword);
         
         $page = $this->input->get('per_page');
 
-        $config['total_rows'] = $this->db->select('*')->from('study')->where(array('status' => 1))->like($like)->count_all_results();;
+        $config['total_rows'] = $this->db->select('*')->from('study')->where(array('catgory_id' => $catgory_id, 'status' => 1))->like($like)->count_all_results();;
         $config['per_page'] = 15;
         $config['num_links'] = 4;
         //$config['uri_segment'] = 7;
@@ -141,15 +133,17 @@ class Question extends Front_Controller {
         $this->pagination->initialize($config);
         $data['pages'] = $this->pagination->create_links();
         
-        $data['study_list'] = $this->db
+        $data['question_list'] = $this->db
 					            ->from('study')
-					            ->where(array('study.status' => 1))
-					            ->like(array('study.title' => $keyword))
-					            ->join('study_catgory', 'study.catgory_id = study_catgory.catgory_id')
-					            ->order_by('study.click desc, study.addtime desc')
+					            ->where(array('catgory_id' => $catgory_id, 'status' => 1))
+					            ->like($like)
+					            ->order_by('click desc, addtime desc')
 					            ->limit($config['per_page'], $page)
 					            ->get()
 					            ->result_array();
-		$this->load->view('pc/company_news', $data);
+
+        $data['webtitle'] = '常见问题';
+
+		$this->load->view('pc/question', $data);
 	}
 }

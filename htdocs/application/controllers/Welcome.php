@@ -28,7 +28,7 @@ class Welcome extends Front_Controller {
                                     ->limit(3)
                                     ->get('study')
                                     ->result_array();
-		$data['webTitle'] = '豆来网';
+		$data['webtitle'] = '豆来网';
 
 		//判断是否为手机登录
 		$this->load->library('user_agent');
