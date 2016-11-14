@@ -17,7 +17,7 @@
     <div id="tagContent">
         <!-- 关于我们  公司简介 start -->
         
-        <div class="tagContent selectTag" id="tagContent0" style=" background:#eeefef; padding:40px 98px 40px 98px; width:900px;">
+        <div class="tagContent selectTag" id="tagContent0" style=" background:#eeefef; padding:40px 98px 40px 98px; width:900px;font-size:16px;line-height:25px;">
         <?php if(!empty($company_info['company_desc'])): ?>
             <p style=" width:900px; margin:0 auto;"><?php echo $company_info['company_desc'];?></p>
         <?php endif; ?>
