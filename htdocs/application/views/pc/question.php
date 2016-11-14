@@ -1,20 +1,7 @@
 <!--头部-->
 <?php $this->load->view('pc/common/header'); ?>
 
-<link href="<?php echo base_url('public/css/pc/dynamic.css'); ?>" rel="stylesheet" type="text/css">
-
-<script type="text/javascript">
-    /*$(function(){
-        $('.search_btn').click(function(){
-            var keyword = $.trim($('input[name="keyword"]').val());
-            if(keyword == '') {
-                layer.alert('请填写搜索的内容');
-            } else {
-                $('#search_form').submit();
-            }
-        });
-    });*/
-</script>
+<link href="public/css/pc/dynamic.css" rel="stylesheet" type="text/css">
 
 <div class="header">
     <!-- <div id="banner"></div>

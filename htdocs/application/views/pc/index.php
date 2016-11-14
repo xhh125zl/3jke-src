@@ -1,5 +1,7 @@
 <?php $this->load->view('pc/common/header'); ?>
 
+<link href="public/css/pc/index.css?t=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+
     <div class="banner"></div>
 
     <div class="login_bg">
@@ -8,33 +10,14 @@
 
     <div class="gonggao">
         <div class="gonggao-con">
-            <div style="width:75%;float:right;overflow:hidden;" id="system_news">
+            <div class="more_news"><a target="_blank" href="company_news">查看更多 ></a></div>
+            <div class="system_news">
             <?php if (! empty($company_news)): ?>
                 <?php foreach ($company_news as $k => $v): ?>
                 <a target="_blank" href="company_news/index/<?php echo $v['study_id']; ?>.html"><?php echo mb_substr($v['title'], 0, 10, 'utf-8'); ?></a>
                 <?php endforeach; ?>
             <?php endif; ?>
             </div>
-            <script type="text/javascript">
-                $(function(){
-                    var news = $('#system_news a');
-                    var show_width = $('#system_news').innerWidth();
-                    var news_width = 0;
-                    for (var i=0; i<news.size(); i++) {
-                        news_width += news.eq(i).innerWidth();
-                    }
-                    setInterval(function(){
-
-                        var left = parseInt(news.eq(0).css('margin-left')) - 1;
-                        news.eq(0).css('margin-left', left+'px');
-
-                        if ((-left) >= (news_width - show_width - 50)) {
-                            news.eq(0).css('margin-left', '0');
-                        }
-
-                    }, 30);
-                });
-            </script>
         </div>
     </div>
 
@@ -178,18 +161,6 @@
 
         </div>
     </div>
-
-    <script type="text/javascript">
-        $(function () {
-            var login_bg = $('.login_bg');
-            if ("underfined" != typeof Users_Account) {
-                if (Users_Account != '') {
-                    login_bg.html('');
-                    login_bg.attr('style', 'display:none;');
-                    $('#biz_login').html('<a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/member">' + Users_Account + ' 欢迎您！');
-                }
-            }
-        });
-    </script>
+    <div class="clear"></div>
 
 <?php $this->load->view('pc/common/footer'); ?>

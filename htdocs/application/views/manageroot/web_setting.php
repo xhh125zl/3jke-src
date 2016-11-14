@@ -11,26 +11,6 @@
 <div id="main_center">
 	<h1>站点设置</h1>
   <?php echo form_open_multipart('manageroot/setting/web_setting', array('class' => 'form-horizontal')); ?>
-   
-    <div class="control-group <?php if(!empty(form_error('address_img'))): ?>error<?php endif; ?>">
-      <label class="control-label" for="address_img">地址图片</label>
-      <div class="controls">
-        <input class="btn" type="file" name="address_img">
-        <?php if(!empty($company_info['address_img'])): ?><img src="<?php echo base_url($company_info['address_img']); ?>" width="60px" height="30px"><?php endif; ?>
-        &nbsp;&nbsp;
-        <span style="color:red;">注意：图片尺寸为749*427</span>
-      </div>
-    </div>
-
-    <div class="control-group <?php if(!empty(form_error('aboutus_banner'))): ?>error<?php endif; ?>">
-      <label class="control-label" for="aboutus_banner">联系我们banner图片</label>
-      <div class="controls">
-        <input class="btn" type="file" name="aboutus_banner">
-        <?php if(!empty($company_info['aboutus_banner'])): ?><img src="<?php echo base_url($company_info['aboutus_banner']); ?>" width="60px" height="30px"><?php endif; ?>
-        &nbsp;&nbsp;
-        <span style="color:red;">注意：图片尺寸为1920*392</span>
-      </div>
-    </div>
 
     <div class="control-group <?php if(!empty(form_error('web_record_number'))): ?>error<?php endif; ?>">
       <label class="control-label" for="web_record_number">网站备案号</label>
@@ -63,10 +43,10 @@
       </div>
     </div>
 
-    <div class="control-group <?php if(!empty(form_error('consult_url'))): ?>error<?php endif; ?>">
+    <!-- <div class="control-group <?php if(!empty(form_error('consult_url'))): ?>error<?php endif; ?>">
       <label class="control-label" for="consult_url">咨询地址</label>
       <div class="controls">
-        <input type="text" id="consult_url" name="consult_url" value="<?php echo $company_info['consult_url']; ?>" class="input-xxlarge" placeholder="咨询地址----格式为  http://www.baidu.com  或  www.baidu.com">
+        <input type="text" id="consult_url" name="consult_url" value="<?php echo $company_info['consult_url']; ?>" class="input-xxlarge" placeholder="咨询地址   格式为  http://www.baidu.com  或  www.baidu.com">
         <?php echo form_error('consult_url'); ?>
       </div>
     </div>
@@ -76,7 +56,7 @@
       <div class="controls">
         <textarea rows="5" style="width:528px;" name="online_code"><?php echo $company_info['online_code']; ?></textarea>
       </div>
-    </div>
+    </div> -->
 
     <div class="control-group" style="clear:both;">
       <label class="control-label" for="inputOrder"></label>

@@ -1,0 +1,274 @@
+/* CSS Document */
+
+body {
+    font-size: 14px;
+    font-famly: "宋体"
+}
+
+#con {
+    font-size: 14px;
+    margin: 0 auto;
+    width: 1100px;
+    font-family: "微软雅黑";
+    margin-top: 60px;
+}
+
+#tags {
+    padding: 0 0 40px 0;
+    margin: 0 0 0 0;
+    width: 1100px;
+    height: 60px;
+}
+
+#tags li {
+    float: left;
+    list-style-type: none;
+    height: 60px;
+    width: 274px;
+    height: 60px;
+    background: #e6e9eb;
+    padding-bootom: 90px;
+    font-size: 20px;
+    line-height: 60px;
+    text-align: center;
+}
+
+#tags li a {
+    float: left;
+    padding-bottom: 0px;
+    color: #227bd5;
+    line-height: 60px;
+    padding-top: 0px;
+    height: 23px;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 90px;
+}
+
+#tags li:hover { background-color:#1f89f3; }
+#tags li:hover a { color:#fff; }
+
+#tags li.emptyTag {
+    background: none transparent scroll repeat 0% 0%;
+    width: 4px;
+}
+
+#tags li.selectTag {
+    background-position: left top;
+    position: relative;
+    height: 60px;
+    background: #1f89f3;
+}
+
+#tags li.selectTag a {
+    color: #fff;
+    line-height: 60px;
+}
+
+#tagContent {
+    border-right: #E8E7E7 1px solid;
+    padding-right: 1px;
+    border-top: #E8E7E7 1px solid;
+    padding-left: 1px;
+    padding-bottom: 1px;
+    border-left: #E8E7E7 1px solid;
+    padding-top: 1px;
+    border-bottom: #E8E7E7 1px solid;
+    background-color: #fff;
+}
+
+.tagContent {
+    padding-right: 10px;
+    display: none;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    width: 1076px;
+    color: #474747;
+    padding-top: 10px;
+}
+
+#tagContent div.selectTag {
+    display: block
+}
+
+.div2 {
+    width: 1090px;
+    margin: 0 auto;
+    margin-left: 0px;
+    margin-top: -20px;
+    position: relative;
+}
+
+.div2 .xf {
+    width: 330px;
+    height: auto;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.div2 .xf img {
+    width: 330px;
+    height: auto;
+    position: relative;
+}
+
+.xf > div {
+    width: 330px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    color: #FFF;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    bottom: -50px;
+    left: 0px;
+    z-index: 10;
+    -webkit-transition: all 1s ease-in 0s;
+}
+
+.xf .hover1 p {
+    text-align: center;
+    line-height: 50px;
+}
+
+.div2 .xf img:hover {
+    cursor: pointer;
+}
+
+.div2 .xf:hover .hover1 {
+    bottom: 7px;
+}
+
+/*百度地图样式*/
+.iw_poi_content
+{
+    font: 12px arial, sans-serif;
+    overflow: visible;
+    padding-top: 4px;
+    white-space: -moz-pre-wrap;
+    word-wrap: break-word
+}
+/*百度地图样式*/
+
+.div3 {
+    width: 1090px;
+    margin: 0 auto;
+    overflow:hidden;
+}
+
+.div3 .div3_1 {
+    float:left;
+    width: 705px;
+    /*height:405px;*/
+    overflow: hidden;
+}
+
+.div3 .div3_1 img {
+    width:100%;
+    height:100%;
+}
+
+.div3_2 {
+    width: 380px;
+    float: right;
+    position: relative;
+    top: 0px;
+    left: 30px;
+
+}
+
+.div3_2 ul li {
+    list-style: none;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.div3_2 ul li img {
+    position: relative;
+    top: 10px;
+}
+
+.div3_2 a {
+    display: block;
+    position: relative;
+    top: 50px;
+    margin-left: 100px;
+}
+
+.div4 {
+    width: 1050px;
+    margin: 10px auto;
+    margin-left: 28px;
+    background: rgba(225, 224, 224, 1.00);
+}
+.div4 p {
+    padding: 0 15px 10px;
+    font-size: 15px;
+}
+.div4 .recruit_tit { padding-top: 10px; font-size: 18px; }
+
+.li_cheng {
+    clear:both;
+    width: 100%;
+    margin: 0 auto;
+    background: url(../../images/pc/lianxi_02.png) no-repeat center;
+    margin-top: 50px;
+}
+
+.li_cheng1 {
+    width: 1000px;
+    height: 1419px;
+    margin: 0 auto;
+}
+
+.li_cheng1 img {
+    display: inline-block;
+    float: left;
+    margin-top: 90px;
+}
+
+.li_cheng1 ul {
+    width: 900px;
+    margin: 0 auto;
+    display: inline-block;
+    float: right;
+    position: relative;
+    top: 50px;
+}
+
+.li_cheng1 ul li {
+    margin-top: 50px;
+}
+
+.li_cheng1 ul li .p_1 {
+    font: normal 20px "微软雅黑";
+    color: #227bd5;
+}
+
+.li_cheng1 ul li .p_2 {
+    font: normal 18px "微软雅黑";
+    color: #4e5052;
+}
+
+.company_con {
+    width: 100%;
+    margin: 50px auto;
+}
+
+.company_con .t_t {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.company_con1 {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.company_con1 img {
+    margin-top: 50px;
+}

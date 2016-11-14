@@ -25,6 +25,7 @@ class Welcome extends Front_Controller {
 		$data['company_news'] = $this->db
 									->where(array('catgory_id' => $catgory_id, 'status' => 1))
                                     ->order_by('addtime desc')
+                                    ->limit(3)
                                     ->get('study')
                                     ->result_array();
 		$data['webTitle'] = '豆来网';

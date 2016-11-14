@@ -1,14 +1,6 @@
 <?php $this->load->view('pc/common/header'); ?>
 
-    <script type="text/javascript">
-        $(function () {
-            if ("underfined" != typeof Users_Account) {
-                if (Users_Account != '') {
-                    $('#biz_login').html('<a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/member">' + Users_Account + ' 欢迎您！');
-                }
-            }
-        });
-    </script>
+<link href="public/css/pc/shop.css?t=<?php echo time(); ?>" rel="stylesheet" type="text/css">
 
     <div class="banner_x"></div>
     <div class="second">
@@ -90,7 +82,8 @@
             </div>
         </div>
     </div>
-
+    <div class="clear"></div>
+    
     <!--_______________广告________________________-->
     <div class="guanggao">
         <div class="guanggao-con">
@@ -105,7 +98,7 @@
             </div>
         </div>
     </div>
-
+    <div class="clear"></div>
     <!--——————————————————footer开始————————————————————————-->
 
 <?php $this->load->view('pc/common/footer'); ?>

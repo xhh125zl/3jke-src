@@ -16,7 +16,7 @@
     <div class="logo">
         <h1>
             <a href="<?php echo base_url(); ?>">
-                <img src="public/images/mobile/ruzhu_03.png" alt="豆来分销"/>
+                <img src="public/images/mobile/logo.png" alt="豆来分销"/>
             </a>
         </h1>
     </div>

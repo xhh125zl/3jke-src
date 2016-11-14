@@ -1,121 +1,64 @@
-<!--头部-->
 <?php $this->load->view('pc/common/header'); ?>
 
-<link href="<?php echo base_url('public/css/pc/aboutus.css'); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url('public/css/pc/aboutus.css'); ?>" rel="stylesheet" type="text/css">
 
-<!--banner部分-->
-<div class="header" style=" background: url(<?php echo base_url($company_info['aboutus_banner']); ?>) no-repeat center; height:392px;">
-</div>
+    <div class="banner"></div>
+    <!--————————————————nav结束——————————————————-->
 
-<div id="con">
-    <ul id="tags">
-        <li class="selectTag"><a onClick="selectTag('tagContent0',this)" href="javascript:void(0)">关于我们</a></li>
-        <li><a onClick="selectTag('tagContent1',this)" href="javascript:void(0)">公司面貌</a></li>
-        <li><a onClick="selectTag('tagContent2',this)" href="javascript:void(0)">联系我们</a></li>
-        <li><a onClick="selectTag('tagContent3',this)" href="javascript:void(0)">人才招聘</a></li>
-    </ul>
-    <div id="tagContent">
-        <!-- 关于我们  公司简介 start -->
-        
-        <div class="tagContent selectTag" id="tagContent0" style=" background:#eeefef; padding:40px 98px 40px 98px; width:900px;font-size:16px;line-height:25px;">
-        <?php if(!empty($company_info['company_desc'])): ?>
-            <p style=" width:900px; margin:0 auto;"><?php echo $company_info['company_desc'];?></p>
-        <?php endif; ?>
+    <div class="tit1">
+        <div class="t1">
+            <img src="public/images/pc/jj_05.png">
         </div>
-        <!-- 关于我们  公司简介 end -->
-
-        <!-- 公司面貌 start -->
-        <div class="tagContent" id="tagContent1">
-        <?php if(!empty($company_face)): ?>
-            <div class="div2">
-                <?php foreach($company_face as $k => $v): ?>
-                <div class="xf"><img src="<?php echo base_url($v['face_pic']); ?>" alt="网中网_微信分销_三级分销_<?php echo $v['face_title']; ?>">
-                    <div class="hover1"><p class="pp"><?php echo $v['face_title']; ?></p></div>
-                </div>
-                <?php endforeach; ?>
-            </div>
-        <?php endif; ?>
-        </div>
-        <!-- 公司面貌 start -->
-
-        <!-- 联系我们 start -->
-        <div class="tagContent" id="tagContent2">
-            <div class="div3">
-                <div class="div3_1" id="dituContent"><img src="<?php if(!empty($company_info['address_img'])): ?><?php echo base_url($company_info['address_img']); ?><?php endif; ?>" alt="网中网_微信分销_三级分销_联系我们"></div>
-                <div class="div3_2">
-                    <ul>
-                        <li><img src="public/images/pc/lianxiw_03.png">&nbsp;&nbsp;&nbsp;&nbsp;总部地址：<?php if(!empty($company_info['company_address'])): ?><?php echo $company_info['company_address'];?><?php endif; ?></li>
-                        <li><img src="public/images/pc/lianxiw_07.png">&nbsp;&nbsp;&nbsp;&nbsp;全国统一售前咨询：<?php if(!empty($company_info['company_contactNum'])): ?><?php echo $company_info['company_contactNum'];?><?php endif; ?></li>
-                        <li><img src="public/images/pc/lianxiw_11.png">&nbsp;&nbsp;&nbsp;&nbsp;电话：<?php if(!empty($company_info['company_contactNum'])): ?><?php echo $company_info['company_contactNum'];?><?php endif; ?></li>
-                        <li><img src="public/images/pc/lianxiw_15.png">&nbsp;&nbsp;&nbsp;&nbsp;邮箱：<?php if(!empty($company_info['company_email'])): ?><?php echo $company_info['company_email'];?><?php endif; ?></li>
-                    </ul>
-                    <a target="_blank" href="<?php echo $company_info['consult_url']; ?>"><img src="public/images/pc/an.png"></a>
-                </div>
-            </div>
-        </div>
-        <!-- 联系我们 end -->
-
-        <!-- 人才招聘 start -->
-        <div class="tagContent" id="tagContent3">
-        <?php if(!empty($company_recruit)): ?>
-        <?php foreach($company_recruit as $k => $v): ?>
-            <div class="div4">
-                <p class="recruit_tit"><?php echo $v['recruit_post']; ?></p>
-                <p><?php echo $v['post_desc']; ?></p>
-            </div>
-        <?php endforeach; ?>
-        <?php endif; ?>
-        </div>
-        <!-- 人才招聘 end -->
     </div>
-</div>
 
-<script type="text/javascript">
-    function selectTag(showContent, selfObj) {
-        // 操作标签
-        var tag = document.getElementById("tags").getElementsByTagName("li");
-        var taglength = tag.length;
-        for (i = 0; i < taglength; i++) {
-            tag[i].className = "";
-        }
-        selfObj.parentNode.className = "selectTag";
-        // 操作内容
-        for (i = 0; j = document.getElementById("tagContent" + i); i++) {
-            j.style.display = "none";
-        }
-        document.getElementById(showContent).style.display = "block";
-    }
-</script>
-
-<!-- 公司发展历程 start -->
-<?php if(!empty($company_history)): ?>
-<div class="li_cheng">
-    <div class="li_cheng1">
-        <img src="public/images/pc/lianxiw_04.png" alt="网中网_微信分销_三级分销_发展历程">
-        <ul>
-        <?php foreach($company_history as $k => $v): ?>
-            <li>
-                <p class="p_1"><?php echo $v['history_time']; ?>年</p>
-                <p class="p_2"><?php echo $v['history_desc']; ?></p>
-            </li>
-        <?php endforeach; ?>
-        </ul>
+    <div class="jianjie">
+        <div class="jianjie-con">
+            <img src="public/images/pc/jj_09.png">
+            <p class="p1 p">网中网科技(移动互联网知名开发商及外包综合服务商)公司办公位置位于花园路与国基路向东200花园SOHO，交通位置好，出行便利，成立于2012年 是一
+                家以微信公众平台的应用和开发科技型技术公司，公司旗下拥有两大核心产品“微易宝”和“好分销”微易宝是腾讯战略合作伙伴，为企业</p>
+            <p class="p2 p-">提供移动互联网整套解决方案。好分销是全国知名微信分销平台，致力于为企业打通移动端营销渠道，也是2015度企业最青睐的互联网产品，产品上线一年时
+                间，使用用户以已超过5000家，业务遍布全国各地。</p>
+            <p class="p3 p">公司拥有完善网络营销体系、专业的策划团队、专业技术团队、客服团队和网络营销培训讲师能快速有效的帮助企业实现网络营销的目的。</p>
+            <p class="p4 p">网中网本着现代立体化营销、科学规范的管理、贴心专注服务不断吸引着知名企业合作，系统的人才资源管理、完善的福利制度及人性化企业综合管理机制培
+                育了一批年轻优秀人才，在公司发展中组建了一个业务纯熟、技术精湛的高素质服务团队，促使公司发展始终充满活力与生机</p>
+        </div>
     </div>
-</div>
-<?php endif; ?>
-<!-- 公司发展历程 end -->
 
-<!-- 企业文化 start -->
-<div class="company_con">
-    <img src="public/images/pc/lianxi11_02.png" class="t_t" alt="网中网_微信分销_三级分销_企业文化">
-    <div class="company_con1">
-        <img src="public/images/pc/lianxi11_05.png" alt="网中网_微信分销_三级分销_企业文化">
-        <img src="public/images/pc/lianxi11_08.png" alt="网中网_微信分销_三级分销_企业使命">
-        <img src="public/images/pc/lianxi11_10.png" alt="网中网_微信分销_三级分销_企业目标">
-        <img src="public/images/pc/lianxi11_13.png" alt="网中网_微信分销_三级分销_企业口号">
+    <div class="wenhau">
+        <div class="wenhau-con">
+            <img src="public/images/pc/jj_13.png">
+        </div>
+
+        <div class="img-con">
+            <div><img src="public/images/pc/jj_16.png"></div>
+            <div><img src="public/images/pc/jj_18.png"></div>
+            <div><img src="public/images/pc/jj_20.png"></div>
+            <div><img src="public/images/pc/jj_22.png"></div>
+        </div>
     </div>
-</div>
-<!-- 企业文化 end -->
 
-<!--底部-->
+    <div class="tit1">
+        <div class="t1">
+            <img src="public/images/pc/jj_29.png">
+        </div>
+    </div>
+
+    <div class="lianxi">
+        <div class="lianxi-con">
+            <div class="l-con">
+                <p><img src="public/images/pc/tubiao_05.png"><span>电话：400-0391-778</span></p>
+                <p><img src="public/images/pc/tubiao_08.png"><span>邮箱：3072220279@qq.com</span></p>
+                <p><img src="public/images/pc/tubiao_11.png"><span>全国统一售前咨询：400-0391-778</span></p>
+                <p class="p4"><img src="public/images/pc/tubiao_15.png"><span>地址：河南省郑州市国基路花园路交叉
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;口向东200米花园SOHO1栋1402室</span></p>
+            </div>
+
+            <div class="r-con">
+                <img src="public/images/pc/jj_33.png">
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+    <!--——————————————————footer开始————————————————————————-->
 <?php $this->load->view('pc/common/footer'); ?>

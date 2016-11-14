@@ -1,0 +1,271 @@
+@charset "utf-8";
+/* webrx CSS Document */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+ul, li, dt, dd, ol, dl {
+    list-style: none;
+}
+
+a {
+    color:#333;
+    text-decoration: none;
+    outline: none;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+/* 导航 start */
+.nav {
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+}
+
+.nav .nav-con {
+    width: 1100px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+.nav .left-con {
+    display: inline-block;
+    float: left;
+    margin-top:15px;
+    height: 53px;
+}
+
+.nav .left-con img {
+    height:100%;
+}
+
+.nav .mid-con {
+    display: inline-block;
+    position: relative;
+    top: 34px;
+    left: 2.5%;
+}
+
+.nav .mid-con ul {
+    width: 100%;
+    overflow: hidden
+}
+
+.nav .mid-con ul li {
+    list-style: none;
+    float: left;
+    margin-left: 37px;
+}
+
+.nav .mid-con ul li a {
+    color: #262626;
+    font: normal 16px "微软雅黑";
+}
+
+.nav .mid-con ul .li1 a {
+    color: #187bc3;
+}
+
+.nav .mid-con ul li a:hover {
+    color: #187bc3;
+}
+
+.nav .right-con {
+    display: inline-block;
+    float: right;
+    margin-top: 30px;
+}
+
+.nav .right-con .span2 {
+    color: #3b9cfd;
+    font: bold 16px "微软雅黑";
+    margin-left: 5px;
+}
+
+.nav .right-con .span2 a {
+    color: #3b9cfd;
+}
+
+.nav .right-con .span1 a {
+    color: #666;
+}
+/* 导航 end */
+
+/* 底部 start */
+.footer {
+    width: 100%;
+    height: 216px;
+    margin: 0 auto;
+    background: #666666;
+}
+
+.footer .footer-con {
+    width: 965px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.footer .footer-con .f-left {
+    display: inline-block;
+    float: left;
+    margin-top: 55px;
+    height:53px;
+}
+
+.footer .footer-con .f-left img {
+    height:100%;
+}
+
+.footer .footer-con .f-mid {
+    display: inline-block;
+    float: left;
+    width: 480px;
+    margin-left: 60px;
+}
+
+.footer .footer-con .f-mid ul {
+    width: 73px;
+    margin-left: 50px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.footer .footer-con .f-mid ul li a {
+    color: #bdbaba;
+    font: normal 14px "微软雅黑";
+    text-align: center;
+    line-height: 28px;
+}
+
+.footer .footer-con .f-mid ul li a:hover {
+    color: #2FACFC;
+}
+
+.footer .footer-con .f-mid ul .li1 a {
+    color: #fff;
+    font: normal 18px "微软雅黑";
+    text-align: center;
+    margin-left: -8px;
+    line-height: 32px;
+}
+
+.footer .footer-con .f-mid p {
+    color: #e0dbdb;
+    font: normal 12px "微软雅黑";
+    text-align: center;
+    margin: 30px 0 0 -30px;
+}
+
+.footer .footer-con .f-right {
+    display: inline-block;
+    float: right;
+    margin-top: 60px;
+}
+
+.footer .footer-con .f-right span {
+    font: normal 30px "微软雅黑";
+    color: #bdbaba;
+    top: -10px;
+    left: 10px;
+    position: relative;
+}
+/* 底部 end */
+
+/* shop、distribution  广告 start */
+.guanggao {
+    width: 100%;
+    margin: 40px auto 40px;
+}
+
+.guanggao-con {
+    width: 1091px;
+    height: 194px;
+    margin: 0 auto;
+}
+
+.guanggao-con .left-g {
+    display: inline-block;
+    float: left;
+    background: url(../../images/pc/guanggao_031.png) no-repeat center;
+    display: block;
+    width: 557px;
+    height: 194px;
+}
+
+.guanggao-con .left-g p {
+    color: #f7f6f6;
+    font: bold 32px "微软雅黑";
+    position: relative;
+    top: 40px;
+    left: 150px;
+}
+
+.guanggao-con .left-g a {
+    color: #404040;
+    font: normal 24px "微软雅黑";
+    background: #fff;
+    width: 209px;
+    height: 43px;
+    display: block;
+    text-align: center;
+    line-height: 43px;
+    margin-top: 20px;
+    position: relative;
+    top: 40px;
+    left: 150px;
+}
+
+.guanggao-con .left-g a:hover {
+    color: #F8070B;
+}
+
+.guanggao-con .right-g {
+    display: inline-block;
+    float: right;
+    background: url(../../images/pc/guanggao_032.png) no-repeat center;
+    display: block;
+    width: 550px;
+    height: 194px;
+    margin-top: -194px;
+}
+
+.guanggao-con .right-g p {
+    color: #f9e2cc;
+    font: bold 32px "微软雅黑";
+    position: relative;
+    top: 40px;
+    left: 150px;
+}
+
+.guanggao-con .right-g a {
+    color: #fff;
+    font: normal 24px "微软雅黑";
+    background: #db3c3a;
+    width: 209px;
+    height: 43px;
+    display: block;
+    text-align: center;
+    line-height: 43px;
+    margin-top: 20px;
+    position: relative;
+    top: 40px;
+    left: 150px;
+}
+
+.guanggao-con .right-g a:hover {
+    color: #FBF202;
+}
+/* 广告 end */

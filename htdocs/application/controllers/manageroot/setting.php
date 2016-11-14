@@ -3,26 +3,11 @@
 class Setting extends MY_Controller {
 
 	public function company_setting(){
-        if($this->session->userdata('role') == 1) {
-            $where = array('user_id' => 0);
-        } else {
-            $where = array('user_id' => $this->session->userdata('loginid'));
-        }
 
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 
 		$log_rule = array(
-            array(
-                'field' => 'company_name',
-                'label' => '公司名称',
-                'rules' => 'trim|required'
-            ),
-            array(
-                'field' => 'company_slogan',
-                'label' => '公司标语',
-                'rules' => 'trim|required'
-            ),
             array(
                 'field' => 'company_address',
                 'label' => '公司地址',
@@ -43,61 +28,12 @@ class Setting extends MY_Controller {
         $this->form_validation->set_error_delimiters('<span class="help-inline">', '</span>');
 
         if ($this->form_validation->run() == TRUE) {
-            $data['company_name'] = $this->input->post('company_name');
-            $data['company_slogan'] = $this->input->post('company_slogan');
-            $data['company_desc'] = $this->input->post('company_desc');
             $data['company_address'] = $this->input->post('company_address');
             $data['company_email'] = $this->input->post('company_email');
             $data['company_contactNum'] = $this->input->post('company_contactNum');
             $data['company_saleNum'] = $this->input->post('company_saleNum');
 			$data['company_afterSaleNum'] = $this->input->post('company_afterSaleNum');
-
-            //图片上传
-            if (is_uploaded_file($_FILES['company_logo']['tmp_name'])) {
-                $picture_logo = $_FILES['company_logo'];
-                $name = date('YmdHis', time()) . '_' . sprintf('%02d', rand(0, 999));
-                $type = $picture_logo["type"];
-                $size = $picture_logo["size"];
-                $tmp_name = $picture_logo["tmp_name"];
-                $type_arr = explode('/', $type);
-
-                $data['company_logo'] = $new_name = 'upload/company/' . $name . '.' . $type_arr[count($type_arr) - 1];
-
-                if (!move_uploaded_file($tmp_name, $new_name)) {
-                    $message_data = array('status' => 0, 'msg' => '图片上传失败', 'choice' => array('list' => array('title' => '返回重新设置', 'url' => site_url('manageroot/setting/company_setting'))));
-                    $this->load->view('manageroot/message', $message_data);
-                }
-            }
-            if (is_uploaded_file($_FILES['company_QRcode1']['tmp_name'])) {
-                $picture_logo = $_FILES['company_QRcode1'];
-                $name = date('YmdHis', time()) . '_' . sprintf('%02d', rand(0, 999));
-                $type = $picture_logo["type"];
-                $size = $picture_logo["size"];
-                $tmp_name = $picture_logo["tmp_name"];
-                $type_arr = explode('/', $type);
-
-                $data['company_QRcode1'] = $new_name = 'upload/company/' . $name . '.' . $type_arr[count($type_arr) - 1];
-
-                if (!move_uploaded_file($tmp_name, $new_name)) {
-                    $message_data = array('status' => 0, 'msg' => '图片上传失败', 'choice' => array('list' => array('title' => '返回重新设置', 'url' => site_url('manageroot/setting/company_setting'))));
-                    $this->load->view('manageroot/message', $message_data);
-                }
-            }
-            if (is_uploaded_file($_FILES['company_QRcode2']['tmp_name'])) {
-                $picture_logo = $_FILES['company_QRcode2'];
-                $name = date('YmdHis', time()) . '_' . sprintf('%02d', rand(0, 999));
-                $type = $picture_logo["type"];
-                $size = $picture_logo["size"];
-                $tmp_name = $picture_logo["tmp_name"];
-                $type_arr = explode('/', $type);
-
-                $data['company_QRcode2'] = $new_name = 'upload/company/' . $name . '.' . $type_arr[count($type_arr) - 1];
-
-                if (!move_uploaded_file($tmp_name, $new_name)) {
-                    $message_data = array('status' => 0, 'msg' => '图片上传失败', 'choice' => array('list' => array('title' => '返回重新设置', 'url' => site_url('manageroot/setting/company_setting'))));
-                    $this->load->view('manageroot/message', $message_data);
-                }
-            }
+            $data['company_desc'] = $this->input->post('company_desc');
 
 			if ($this->db->where($where)->update('company_info', $data)) {
 				$message_data = array('status' => 200, 'msg' => '公司设置修改成功', 'choice' => array('list' => array('title' => '返回查看公司设置项', 'url' => site_url('manageroot/setting/company_setting'))));
@@ -107,18 +43,13 @@ class Setting extends MY_Controller {
 				$this->load->view('manageroot/message', $message_data);
 			}
 		} else {
-			$data['company_info'] = $this->db->where($where)->get('company_info')->row_array();
+			$data['company_info'] = $this->db->where(array('company_id' => 1))->get('company_info')->row_array();
 
 			$this->load->view('manageroot/company_setting', $data);
 		}
 	}
 
     public function web_setting(){
-        if($this->session->userdata('role') == 1) {
-            $where = array('user_id' => 0);
-        } else {
-            $where = array('user_id' => $this->session->userdata('loginid'));
-        }
 
         $this->load->helper('form');
         $this->load->library('form_validation');
@@ -156,38 +87,6 @@ class Setting extends MY_Controller {
             $data['consult_url'] = $this->input->post('consult_url');
             $data['online_code'] = $this->input->post('online_code');
 
-            //图片上传
-            if (is_uploaded_file($_FILES['address_img']['tmp_name'])) {
-                $picture_logo = $_FILES['address_img'];
-                $name = date('YmdHis', time()) . '_' . sprintf('%02d', rand(0, 999));
-                $type = $picture_logo["type"];
-                $size = $picture_logo["size"];
-                $tmp_name = $picture_logo["tmp_name"];
-                $type_arr = explode('/', $type);
-
-                $data['address_img'] = $new_name = 'upload/company/' . $name . '.' . $type_arr[count($type_arr) - 1];
-
-                if (!move_uploaded_file($tmp_name, $new_name)) {
-                    $message_data = array('status' => 0, 'msg' => '图片上传失败', 'choice' => array('list' => array('title' => '返回重新设置', 'url' => site_url('manageroot/setting/web_setting'))));
-                    $this->load->view('manageroot/message', $message_data);
-                }
-            }
-            if (is_uploaded_file($_FILES['aboutus_banner']['tmp_name'])) {
-                $picture_logo = $_FILES['aboutus_banner'];
-                $name = date('YmdHis', time()) . '_' . sprintf('%02d', rand(0, 999));
-                $type = $picture_logo["type"];
-                $size = $picture_logo["size"];
-                $tmp_name = $picture_logo["tmp_name"];
-                $type_arr = explode('/', $type);
-
-                $data['aboutus_banner'] = $new_name = 'upload/company/' . $name . '.' . $type_arr[count($type_arr) - 1];
-
-                if (!move_uploaded_file($tmp_name, $new_name)) {
-                    $message_data = array('status' => 0, 'msg' => '图片上传失败', 'choice' => array('list' => array('title' => '返回重新设置', 'url' => site_url('manageroot/setting/web_setting'))));
-                    $this->load->view('manageroot/message', $message_data);
-                }
-            }
-
             if ($this->db->where($where)->update('company_info', $data)) {
                 $message_data = array('status' => 200, 'msg' => '站点设置修改成功', 'choice' => array('list' => array('title' => '返回查看站点设置项', 'url' => site_url('manageroot/setting/web_setting'))));
                 $this->load->view('manageroot/message', $message_data);
@@ -196,7 +95,7 @@ class Setting extends MY_Controller {
                 $this->load->view('manageroot/message', $message_data);
             }
         } else {
-            $data['company_info'] = $this->db->where($where)->get('company_info')->row_array();
+            $data['company_info'] = $this->db->where(array('company_id' => 1))->get('company_info')->row_array();
 
             $this->load->view('manageroot/web_setting', $data);
         }

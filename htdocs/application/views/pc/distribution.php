@@ -1,14 +1,6 @@
 <?php $this->load->view('pc/common/header'); ?>
 
-    <script type="text/javascript">
-        $(function () {
-            if ("underfined" != typeof Users_Account) {
-                if (Users_Account != '') {
-                    $('#biz_login').html('<a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/member">' + Users_Account + ' 欢迎您！');
-                }
-            }
-        });
-    </script>
+<link href="public/css/pc/distribution.css?t=<?php echo time(); ?>" rel="stylesheet" type="text/css">
 
     <div class="banner2"></div>
     <!--————————————————nav结束——————————————————-->
@@ -64,6 +56,7 @@
             </ul>
         </div>
     </div>
+    <div class="clear"></div>
     <!--——————优势end——————————————————————————-->
 
     <!--——————特点部分——————————————————————————-->
@@ -147,6 +140,7 @@
             </ul>
         </div>
     </div>
+    <div class="clear"></div>
 
     <!--————————————————————————————anli——————————————————————————-->
 
@@ -161,9 +155,10 @@
             <img src="public/images/pc/lizi_03.png">
         </div>
     </div>
+    <div class="clear"></div>
 
     <!--_______________广告________________________-->
-    <div class="guanggao1">
+    <div class="guanggao">
         <div class="guanggao-con">
             <div class="left-g">
                 <p>没货源，想开店</p>
@@ -176,5 +171,6 @@
             </div>
         </div>
     </div>
+    <div class="clear"></div>
 
 <?php $this->load->view('pc/common/footer'); ?>
