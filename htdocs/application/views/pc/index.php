@@ -14,7 +14,7 @@
             <div class="system_news">
             <?php if (! empty($company_news)): ?>
                 <?php foreach ($company_news as $k => $v): ?>
-                <a target="_blank" href="company_news/index/<?php echo $v['study_id']; ?>.html"><?php echo mb_substr($v['title'], 0, 10, 'utf-8'); ?></a>
+                <a target="_blank" href="company_news/index/<?php echo $v['study_id']; ?>.html" title="<?php echo $v['title']; ?>"><?php echo mb_substr($v['title'], 0, 10, 'utf-8'); ?></a>
                 <?php endforeach; ?>
             <?php endif; ?>
             </div>

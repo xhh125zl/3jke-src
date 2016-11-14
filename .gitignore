@@ -13,4 +13,6 @@
 !htdocs/application/logs/index.html
 !htdocs/application/logs/.htaccess
 
+/htdocs/public/sess_save_path/*
+
 .idea/*
