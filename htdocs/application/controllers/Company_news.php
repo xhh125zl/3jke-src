@@ -5,7 +5,6 @@ class Company_news extends Front_Controller {
 
 	public function index()
 	{
-		$data = $this->keywords();
 		$first_value = intval(explode('.', $this->uri->segment(3))[0]);
         if ($first_value > 0) {
             $data['study_content'] = $this->db
@@ -61,7 +60,7 @@ class Company_news extends Front_Controller {
             $data['pages'] = $this->pagination->create_links();
         } 
 
-		$data['webTitle'] = '公司动态';
+		$data['webtitle'] = '公司动态';
 
 		$this->load->view('pc/company_news', $data);
 
@@ -74,37 +73,12 @@ class Company_news extends Front_Controller {
 		}*/
 	}
 
-	public function keywords()
-	{
-		//获取三个关键字
-        $data['search_keywords'] = $this->db
-                                    ->from('study')
-                                    ->where(array('study.status' => 1))
-                                    ->join('study_catgory', 'study.catgory_id = study_catgory.catgory_id')
-                                    ->like('study_catgory.catgory_path', '0-1-', 'after')
-                                    ->order_by('study.click desc, study.addtime desc')
-                                    ->limit(3)
-                                    ->get()
-                                    ->result_array();
-        return $data;
-	}
-
 	public function search()
 	{
+        $catgory_id = 3;
         $keyword = $data['keyword'] = trim($this->input->get('keyword'));
+        $like = array('title' => $keyword);
 
-        if(!empty($keyword)) {
-            //收集搜索关键字
-            $res = $this->db->where(array('search_word' => $keyword))->get('search_keyword')->row_array();
-            if(!empty($res)) {
-                $this->db->where(array('keyword_id' => $res['keyword_id']))->update('search_keyword', array('search_num' => $res['search_num']+1));
-            } else {
-                $this->db->insert('search_keyword', array('search_word' => $keyword));
-            }
-        }
-
-		$data = $this->keywords();
-        $like = array('study.title' => $keyword);
 		//分页处理
 		$this->load->library('pagination');
 		
@@ -112,7 +86,7 @@ class Company_news extends Front_Controller {
         
         $page = $this->input->get('per_page');
 
-        $config['total_rows'] = $this->db->select('*')->from('study')->where(array('status' => 1))->like($like)->count_all_results();;
+        $config['total_rows'] = $this->db->select('*')->from('study')->where(array('catgory_id' => $catgory_id, 'status' => 1))->like($like)->count_all_results();;
         $config['per_page'] = 15;
         $config['num_links'] = 4;
         //$config['uri_segment'] = 7;
@@ -143,13 +117,15 @@ class Company_news extends Front_Controller {
         
         $data['study_list'] = $this->db
 					            ->from('study')
-					            ->where(array('study.status' => 1))
+					            ->where(array('catgory_id' => $catgory_id, 'status' => 1))
 					            ->like($like)
-					            ->join('study_catgory', 'study.catgory_id = study_catgory.catgory_id')
-					            ->order_by('study.click desc, study.addtime desc')
+					            ->order_by('click desc, addtime desc')
 					            ->limit($config['per_page'], $page)
 					            ->get()
 					            ->result_array();
+
+        $data['webtitle'] = '公司动态';
+
 		$this->load->view('pc/company_news', $data);
 	}
 }

@@ -5,7 +5,7 @@ class Distribution extends Front_Controller {
 
 	public function index()
 	{
-		$data['webTitle'] = '豆来分销';
+		$data['webtitle'] = '豆来分销';
 
 		//判断是否为手机登录
 		$this->load->library('user_agent');

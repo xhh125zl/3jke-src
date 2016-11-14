@@ -24,7 +24,7 @@ class Front_Controller extends CI_Controller {
         $data['method'] = $this->uri->segment(2);
    
         //获取公司信息
-        $data['company_info'] = $this->db->where(array('user_id' => 0))->get('company_info')->row_array();
+        $data['company_info'] = $this->db->where(array('company_id' => 1))->get('company_info')->row_array();
 
         $this->load->vars($data);
     }

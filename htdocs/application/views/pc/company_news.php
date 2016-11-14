@@ -5,22 +5,6 @@
 
 <div class="header">
     <div id="banner"></div>
-    <div class="clear"></div>
-    <!-- <div class="search">
-        <div class="action_search">
-        <form method="get" action="<?php echo base_url('company_news/search'); ?>" id="search_form">
-            <input type="text" name="keyword" maxlength="15" value="<?php if (!empty($keyword)): ?><?php echo $keyword; ?><?php endif; ?>" class="search_content"/>
-            <input type="submit" value="" class="search_btn"/>
-        </form>
-        </div>
-        <div class="search_keywords">
-        <?php if (!empty($search_keywords)): ?>
-        <?php foreach ($search_keywords as $k => $v): ?>
-            <a href="<?php echo base_url('company_news/search?keyword=' . $v['title']); ?>"><?php echo $v['title']; ?></a>
-        <?php endforeach; ?>
-    <?php endif; ?>
-        </div>
-    </div> -->
 </div>
 <div class="clear"></div>
 
