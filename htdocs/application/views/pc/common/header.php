@@ -27,7 +27,7 @@
             }
 
             //商家注册弹窗
-            $('#biz_login').click(function(){
+            $('#biz_login, #biz_login1').click(function(){
                 layer.open({
                     type: 2,
                     title: '商家入驻',

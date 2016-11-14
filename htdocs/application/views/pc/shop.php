@@ -6,7 +6,7 @@
     <div class="second">
         <div class="sec-con">
             <img src="public/images/pc/s_05.png">
-            <a id="biz_login">立即注册开店</a>
+            <a id="biz_login1">立即注册开店</a>
         </div>
     </div>
 
