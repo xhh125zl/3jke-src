@@ -1,7 +1,7 @@
 <!--头部-->
 <?php $this->load->view('pc/common/header'); ?>
 
-<link href="public/css/pc/question.css?t=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+<link href="public/css/pc/help.css?t=<?php echo time(); ?>" rel="stylesheet" type="text/css">
 
 <div class="header">
     <div class="question-tit">
@@ -22,27 +22,32 @@
     <div class="question_nav">
         <ul>
             <li>分类1</li>
-            <li>
-                <ul>
-                    <li>分类2</li>
-                    <li>分类2</li>
-                    <li>分类2</li>
-                    <li>分类2</li>
-                </ul>
-            </li>
+            
+            <li>分类2</li>
+            <li>分类2</li>
+            <li>分类2</li>
+            <li>分类2</li>
+            <li>分类2</li>
+            <li>分类2</li>
+            <li>分类2</li>
+            <li>分类2</li>
+            <li>分类2</li>
+            <li>分类2</li>
+            <li>分类2</li>
+            <li>分类2</li>
         </ul>
     </div>
     <div class="clear"></div>
 
     <div class="question">
-        <div class="content">
+        <div class="content_list">
+
             <?php if(!empty($question_list)): ?>
                 <?php foreach($question_list as $k => $v): ?>
-                    <div style="clear:both;width:1100px;height:30px;">
-                        <div style="float:left;">
-                            <a href="<?php echo base_url('question/index').'/'.$v['study_id'].'.html'; ?>" style="text-align:left;" class="a_cover"><?php echo mb_substr($v['title'], 0, 45, 'utf-8'); ?></a>
-                        </div>
-                    </div>
+                <div class="content">
+                    <h3><span><?php echo $k; ?></span>&nbsp;&nbsp;<a href="help/index/<?php echo $v['study_id']; ?>.html"><?php echo $v['title']; ?></a></h3>
+                    <p><?php echo $v['description']; ?></p>
+                </div>
                 <?php endforeach; ?>
 
             <?php elseif (!empty($question_con)): ?>

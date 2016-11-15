@@ -41,7 +41,7 @@
         <tr>
           <td><?php echo $v['study_id']; ?></td>
           <td><?php echo $v['catgory_name']; ?></td>
-          <td><a target="_blank" href="<?php echo base_url(); ?><?php switch($v['catgory_id']){case 3:echo '/company_news/index/'; break; case 6:echo 'question/index/'; break;} ?><?php echo $v['study_id'].'.html'; ?>"><?php echo $v['title']; ?></a></td>
+          <td><a target="_blank" href="<?php echo base_url(); ?><?php switch($v['catgory_id']){case 3:echo '/company_news/index/'; break; case 6:echo 'help/index/'; break;} ?><?php echo $v['study_id'].'.html'; ?>"><?php echo $v['title']; ?></a></td>
           <td><?php echo $v['click']; ?></td>
           <td><?php if($v['status'] == '1'): ?>启用<?php elseif($v['status'] == '0'): ?>停用<?php endif; ?></td>
           <td><a href="<?php echo site_url('manageroot/study/study_edit/'.$v['study_id']); ?>"><i class="icon-pencil"></i> 编辑</a>　<a href="<?php echo site_url('manageroot/study/study_delete/'.$v['study_id']); ?>"><i class="icon-trash"></i> 删除</a></td>

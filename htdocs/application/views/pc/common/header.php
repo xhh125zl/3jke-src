@@ -67,7 +67,7 @@
             <span class="span1 tishi">没有账号？&nbsp;&nbsp;</span>
             <span class="span2 biz_register" id="biz_login" style="cursor:pointer;">立即注册</span>
             <span class="span2">|</span>
-            <span class="span2"><a target="_blank" href="question">帮助中心</a></span>
+            <span class="span2"><a target="_blank" href="help">帮助中心</a></span>
         </div>
     </div>
 </div>

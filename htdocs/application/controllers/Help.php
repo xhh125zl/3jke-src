@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Question extends Front_Controller {
+class Help extends Front_Controller {
 
 	public function index()
 	{
@@ -17,7 +17,7 @@ class Question extends Front_Controller {
 
             //解析$p 为分页做准备
             $this->load->library('pagination');
-            $config['base_url'] = site_url('question/index/p/');
+            $config['base_url'] = site_url('help/index/p/');
             $config['total_rows'] = $this->db
                                     ->from('study')
                                     ->where(array('catgory_id' => $catgory_id, 'status' => 1))
@@ -63,7 +63,7 @@ class Question extends Front_Controller {
 
 		$data['webtitle'] = '常见问题';
 
-		$this->load->view('pc/question', $data);
+		$this->load->view('pc/help', $data);
 
 		/*//判断是否为手机登录
 		$this->load->library('user_agent');
@@ -100,7 +100,7 @@ class Question extends Front_Controller {
 		//分页处理
 		$this->load->library('pagination');
 		
-        $config['base_url'] = site_url('question/search/?keyword='.$keyword);
+        $config['base_url'] = site_url('help/search/?keyword='.$keyword);
         
         $page = $this->input->get('per_page');
 
@@ -144,6 +144,6 @@ class Question extends Front_Controller {
 
         $data['webtitle'] = '常见问题';
 
-		$this->load->view('pc/question', $data);
+		$this->load->view('pc/help', $data);
 	}
 }
