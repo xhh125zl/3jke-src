@@ -9,7 +9,7 @@
             <span class="tit1">Problems</span>&nbsp;&nbsp;<span class="tit2">常见问题</span>
         </div>
         <div class="search">
-            <form method="get" action="<?php echo base_url('question/search'); ?>" id="search_form">
+            <form method="get" action="<?php echo base_url('help/search'); ?>" id="search_form">
                 <input type="text" name="keyword" maxlength="15" value="<?php if(!empty($keyword)): ?><?php echo $keyword; ?><?php endif; ?>" class="search_content" placeholder="输入要查询的内容"/>
                 <input type="submit" value="搜索" class="search_btn"/>
             </form>
@@ -21,20 +21,11 @@
 <div class="main">
     <div class="question_nav">
         <ul>
-            <li>分类1</li>
-            
-            <li>分类2</li>
-            <li>分类2</li>
-            <li>分类2</li>
-            <li>分类2</li>
-            <li>分类2</li>
-            <li>分类2</li>
-            <li>分类2</li>
-            <li>分类2</li>
-            <li>分类2</li>
-            <li>分类2</li>
-            <li>分类2</li>
-            <li>分类2</li>
+        <?php if(!empty($question_catgory)): ?>
+            <?php foreach($question_catgory as $k => $v): ?>
+            <a href="help/index/cate/<?php echo $v['catgory_id']; ?>"><li <?php if ($v['catgory_id'] == $this->uri->segment(4)) {echo 'style="background-color:#F97206;"';} ?>><?php echo $v['catgory_name']; ?></li></a>
+            <?php endforeach; ?>
+        <?php endif; ?>
         </ul>
     </div>
     <div class="clear"></div>
@@ -45,7 +36,7 @@
             <?php if(!empty($question_list)): ?>
                 <?php foreach($question_list as $k => $v): ?>
                 <div class="content">
-                    <h3><span><?php echo $k; ?></span>&nbsp;&nbsp;<a href="help/index/<?php echo $v['study_id']; ?>.html"><?php echo $v['title']; ?></a></h3>
+                    <h3><span><?php echo $k+1; ?></span>&nbsp;&nbsp;<a href="help/index/study/<?php echo $v['study_id']; ?>.html"><?php echo $v['title']; ?></a></h3>
                     <p><?php echo $v['description']; ?></p>
                 </div>
                 <?php endforeach; ?>

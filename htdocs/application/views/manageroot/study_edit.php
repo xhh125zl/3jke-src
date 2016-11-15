@@ -39,8 +39,19 @@
     <label class="control-label" for="catgory_name">选择分类</label>
     <div class="controls">
       <select class="span3" name="catgory_id">
-        <option value="3">公司动态</option>
-        <option value="6">常见问题</option>
+        <?php if (!empty($cat_arr)): ?>
+          <?php foreach ($cat_arr as $k => $v): ?>
+            <?php if ($v['catgory_id'] == 3): ?>
+            <option value="<?php echo $v['catgory_id']; ?>" <?php if ($single_info['catgory_id'] == $v['catgory_id']): ?>selected="selected"<?php endif; ?> ><?php echo $v['catgory_name']; ?></option>
+            <?php endif; ?>
+            <?php if ($v['catgory_id'] == 6): ?>
+            <option value="<?php echo $v['catgory_id']; ?>" disabled><?php echo $v['catgory_name']; ?></option>
+            <?php endif; ?>
+            <?php if ($v['parent_id'] == 6): ?>
+            <option value="<?php echo $v['catgory_id']; ?>" <?php if ($single_info['catgory_id'] == $v['catgory_id']): ?>selected="selected"<?php endif; ?> >----<?php echo $v['catgory_name']; ?></option>
+            <?php endif; ?>
+          <?php endforeach; ?>
+        <?php endif; ?>
       </select>
     </div>
   </div>

@@ -33,6 +33,8 @@
         <ul>
             <li class="nav_item"><a href="<?php echo site_url('manageroot/setting/company_setting'); ?>" target="main"><i class="icon-hand-right"></i> 公司设置</a></li>
             <li class="nav_item"><a href="<?php echo site_url('manageroot/setting/web_setting'); ?>" target="main"><i class="icon-hand-right"></i> 网站设置</a></li>
+            <li class="nav_item"><a href="<?php echo site_url('manageroot/study_catgory/catgory_add'); ?>" target="main"><i class="icon-hand-right"></i> 添加分类</a></li>
+            <li class="nav_item"><a href="<?php echo site_url('manageroot/study_catgory/catgory_list'); ?>" target="main"><i class="icon-hand-right"></i> 分类列表</a></li>
             <li class="nav_item"><a href="<?php echo site_url('manageroot/study/study_add'); ?>" target="main"><i class="icon-hand-right"></i> 添加文档</a></li>
             <li class="nav_item"><a href="<?php echo site_url('manageroot/study/study_list'); ?>" target="main"><i class="icon-hand-right"></i> 管理文档</a></li>
         </ul>

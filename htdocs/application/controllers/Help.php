@@ -3,25 +3,45 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Help extends Front_Controller {
 
+    public function catgory()
+    {
+        //获取三个关键字
+        $catgory_id = 6;
+        $data['question_catgory'] = $this->db
+                                    ->from('study_catgory')
+                                    ->where(array('parent_id' => $catgory_id))
+                                    ->order_by('catgory_id')
+                                    ->get()
+                                    ->result_array();
+        return $data;
+    }
+
 	public function index()
 	{
-		$data = $this->keywords();
-		$first_value = intval(explode('.', $this->uri->segment(3))[0]);
-        if ($first_value > 0) {
+		$data = $this->catgory();
+        $act = $this->uri->segment(3);
+		$first_value = intval(explode('.', $this->uri->segment(4))[0]);
+        if ($act == 'study' && $first_value > 0) {
             $data['question_con'] = $this->db
                                     ->where(array('study_id' => $first_value, 'status' => 1))
                                     ->get('study')
                                     ->row_array();
         } else {
             $catgory_id = 6;
+            if ($act == 'cate' && $first_value > 0) {
+                $catgory_type = array('study.catgory_id' => $first_value);
+            } else {
+                $catgory_type = '';
+            }
 
             //解析$p 为分页做准备
             $this->load->library('pagination');
             $config['base_url'] = site_url('help/index/p/');
             $config['total_rows'] = $this->db
                                     ->from('study')
-                                    ->where(array('catgory_id' => $catgory_id, 'status' => 1))
-                                    ->order_by('addtime desc')
+                                    ->join('study_catgory', 'study.catgory_id = study_catgory.catgory_id')
+                                    ->where(array('study_catgory.parent_id' => $catgory_id))
+                                    ->order_by('study.addtime desc')
                                     ->count_all_results();
             $config['per_page'] = 15;
             $config['num_links'] = 4;
@@ -52,8 +72,9 @@ class Help extends Front_Controller {
 
             $data['question_list'] = $this->db
                                     ->from('study')
-                                    ->where(array('catgory_id' => $catgory_id, 'status' => 1))
-                                    ->order_by('addtime desc')
+                                    ->join('study_catgory', 'study.catgory_id = study_catgory.catgory_id')
+                                    ->where(array('study_catgory.parent_id' => $catgory_id))
+                                    ->order_by('study.addtime desc')
                                     ->limit($config['per_page'], (int)$this->uri->segment(4))
                                     ->get()
                                     ->result_array();
@@ -61,7 +82,7 @@ class Help extends Front_Controller {
             $data['pages'] = $this->pagination->create_links();
         } 
 
-		$data['webtitle'] = '常见问题';
+		$data['webtitle'] = '帮助中心';
 
 		$this->load->view('pc/help', $data);
 
@@ -74,28 +95,14 @@ class Help extends Front_Controller {
 		}*/
 	}
 
-	public function keywords()
-	{
-		//获取三个关键字
-        $catgory_id = 6;
-        $data['search_keywords'] = $this->db
-                                    ->from('study')
-                                    ->where(array('catgory_id' => $catgory_id, 'status' => 1))
-                                    ->order_by('click desc, addtime desc')
-                                    ->limit(3)
-                                    ->get()
-                                    ->result_array();
-        return $data;
-	}
-
 	public function search()
 	{
-        $data = $this->keywords();
+        $data = $this->catgory();
 
         $catgory_id = 6;
 
         $keyword = $data['keyword'] = trim($this->input->get('keyword'));
-        $like = array('title' => $keyword);
+        $like = array('study.title' => $keyword);
 
 		//分页处理
 		$this->load->library('pagination');
@@ -104,7 +111,13 @@ class Help extends Front_Controller {
         
         $page = $this->input->get('per_page');
 
-        $config['total_rows'] = $this->db->select('*')->from('study')->where(array('catgory_id' => $catgory_id, 'status' => 1))->like($like)->count_all_results();;
+        $config['total_rows'] = $this->db
+                                    ->from('study')
+                                    ->join('study_catgory', 'study.catgory_id = study_catgory.catgory_id')
+                                    ->where(array('study_catgory.parent_id' => $catgory_id))
+                                    ->like($like)
+                                    ->order_by('study.addtime desc')
+                                    ->count_all_results();;
         $config['per_page'] = 15;
         $config['num_links'] = 4;
         //$config['uri_segment'] = 7;
@@ -135,14 +148,15 @@ class Help extends Front_Controller {
         
         $data['question_list'] = $this->db
 					            ->from('study')
-					            ->where(array('catgory_id' => $catgory_id, 'status' => 1))
-					            ->like($like)
+                                ->join('study_catgory', 'study.catgory_id = study_catgory.catgory_id')
+                                ->where(array('study_catgory.parent_id' => $catgory_id))
+				                ->like($like)
 					            ->order_by('click desc, addtime desc')
 					            ->limit($config['per_page'], $page)
 					            ->get()
 					            ->result_array();
 
-        $data['webtitle'] = '常见问题';
+        $data['webtitle'] = '帮助中心';
 
 		$this->load->view('pc/help', $data);
 	}
