@@ -10,7 +10,7 @@
 
     <div class="gonggao">
         <div class="gonggao-con">
-            <div class="more_news"><a target="_blank" href="company_news">查看更多 ></a></div>
+            <!-- <div class="more_news"><a target="_blank" href="company_news">查看更多 ></a></div> -->
             <div class="system_news">
             <?php if (! empty($company_news)): ?>
                 <?php foreach ($company_news as $k => $v): ?>

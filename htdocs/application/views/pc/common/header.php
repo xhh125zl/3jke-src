@@ -30,12 +30,12 @@
             $('#biz_login, #biz_login1').click(function(){
                 layer.open({
                     type: 2,
-                    title: '商家入驻',
+                    title: ['商家注册', 'background-color:#eee; padding-left:39%; font-size:20px;'],
                     shadeClose: true,
                     shade: [0.5],
-                    maxmin: true, //开启最大化最小化按钮
-                    area: ['893px', '600px'],
-                    content: '<?php echo rtrim(SHOP_URL, '/'); ?>/reg.php'
+                    area: ['360px', '365px'],
+                    offset: ['20%', ''],
+                    content: ['<?php echo rtrim(SHOP_URL, '/'); ?>/reg.php', 'no']
                 });
             });
         });

@@ -28,27 +28,7 @@
 
     <div class="main_right">
         <div id="content">
-            <?php if(!empty($question)): ?>
-                <?php foreach($question as $k => $v): ?>
-                <div class="news">
-                    <a href="<?php echo base_url('question/index').'/'.$v['study_id'].'.html'; ?>">
-                        <div class="new_img">
-                            <img src="<?php if(!empty($v['cover_img'])){echo base_url($v['cover_img']);} else{echo 'public/images/pc/action_01.jpg';} ?>" alt="网中网_<?php echo $v['title']; ?>" style="width:100%; height:100%;">
-                        </div>
-                    </a>
-                    <div class="new_msg">
-                        <div class="new_title"><a href="<?php echo base_url('question/index').'/'.$v['study_id'].'.html'; ?>"><?php echo mb_substr($v['title'],0,20,'utf8'); ?></a></div>
-                        <div class="new_content"><a href="<?php echo base_url('question/index').'/'.$v['study_id'].'.html'; ?>"><?php echo mb_substr($v['description'],0,90,'utf8'); ?></a></div>
-                    </div>
-                </div>
-                <?php endforeach; ?>
-
-            <?php elseif (!empty($question_con)): ?>
-                <div><a class="a_cover" href="javascript:history.back();"><<返回</a></div>
-                <h1 style="text-align:center; width:98%; line-height:40px; font-size:18px;"><?php echo $question_con['title']; ?></h3>
-                <?php echo $question_con['content']; ?>
-
-            <?php elseif(!empty($question_list)): ?>
+            <?php if(!empty($question_list)): ?>
                 <?php foreach($question_list as $k => $v): ?>
                     <div style="clear:both;width:930px;height:30px;">
                         <div style="float:left;">
@@ -59,6 +39,11 @@
                         </div>
                     </div>
                 <?php endforeach; ?>
+
+            <?php elseif (!empty($question_con)): ?>
+                <div><a class="a_cover" href="javascript:history.back();"><<返回</a></div>
+                <h1 style="text-align:center; width:98%; line-height:40px; font-size:18px;"><?php echo $question_con['title']; ?></h3>
+                <?php echo $question_con['content']; ?>
 
             <?php else: ?>
                 <p style="text-align:center;">没有找到你要的内容...</p>

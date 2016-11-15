@@ -50,7 +50,7 @@ class Question extends Front_Controller {
             
             $this->pagination->initialize($config);
 
-            $data['question'] = $this->db
+            $data['question_list'] = $this->db
                                     ->from('study')
                                     ->where(array('catgory_id' => $catgory_id, 'status' => 1))
                                     ->order_by('addtime desc')
