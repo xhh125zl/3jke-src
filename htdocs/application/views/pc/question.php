@@ -1,41 +1,46 @@
 <!--头部-->
 <?php $this->load->view('pc/common/header'); ?>
 
-<link href="public/css/pc/question.css" rel="stylesheet" type="text/css">
+<link href="public/css/pc/question.css?t=<?php echo time(); ?>" rel="stylesheet" type="text/css">
 
 <div class="header">
-    <!-- <div id="banner"></div>
-    <div class="clear"></div> -->
-    <div class="search">
-        <div class="action_search">
-        <form method="get" action="<?php echo base_url('question/search'); ?>" id="search_form">
-            <input type="text" name="keyword" maxlength="15" value="<?php if(!empty($keyword)): ?><?php echo $keyword; ?><?php endif; ?>" class="search_content"/>
-            <input type="submit" value="" class="search_btn"/>
-        </form>
+    <div class="question-tit">
+        <div class="tit">
+            <span class="tit1">Problems</span>&nbsp;&nbsp;<span class="tit2">常见问题</span>
         </div>
-        <div class="search_keywords">
-        <?php if(!empty($search_keywords)): ?>
-            <?php foreach($search_keywords as $k => $v): ?>
-                <a href="<?php echo base_url('question/search?keyword='.$v['title']); ?>"><?php echo $v['title']; ?></a>
-            <?php endforeach; ?>
-        <?php endif; ?>
+        <div class="search">
+            <form method="get" action="<?php echo base_url('question/search'); ?>" id="search_form">
+                <input type="text" name="keyword" maxlength="15" value="<?php if(!empty($keyword)): ?><?php echo $keyword; ?><?php endif; ?>" class="search_content" placeholder="输入要查询的内容"/>
+                <input type="submit" value="搜索" class="search_btn"/>
+            </form>
         </div>
     </div>
 </div>
 <div class="clear"></div>
 
 <div class="main">
+    <div class="question_nav">
+        <ul>
+            <li>分类1</li>
+            <li>
+                <ul>
+                    <li>分类2</li>
+                    <li>分类2</li>
+                    <li>分类2</li>
+                    <li>分类2</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="clear"></div>
 
-    <div class="main_right">
-        <div id="content">
+    <div class="question">
+        <div class="content">
             <?php if(!empty($question_list)): ?>
                 <?php foreach($question_list as $k => $v): ?>
-                    <div style="clear:both;width:930px;height:30px;">
+                    <div style="clear:both;width:1100px;height:30px;">
                         <div style="float:left;">
                             <a href="<?php echo base_url('question/index').'/'.$v['study_id'].'.html'; ?>" style="text-align:left;" class="a_cover"><?php echo mb_substr($v['title'], 0, 45, 'utf-8'); ?></a>
-                        </div>
-                        <div style="float:right;">
-                            <span style="text-align:right;"><?php echo date('Y-m-d H:i:s',$v['addtime']); ?></span>
                         </div>
                     </div>
                 <?php endforeach; ?>
