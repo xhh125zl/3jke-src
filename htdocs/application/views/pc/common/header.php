@@ -21,13 +21,16 @@
         $(function () {
             //判断登录状态
             if (Users_Account != '') {
-                $('.login_bg').remove();
+                //$('.login_bg').remove();
+                $('.login_bg').attr('style', 'filter:alpha(opacity=60); -moz-opacity:0.6; opacity:0.7;');
+                $('.login_bg').html('<div class="prompt"><h1>欢迎使用豆来平台！</h1><p>你当前登录的账号为：<br>' + Users_Account + '</p><a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/member">进入我的豆来</a>');
                 $('.tishi').remove();
                 $('#biz_login').html('<a target="_blank" href="<?php echo rtrim(SHOP_URL, '/'); ?>/member">' + Users_Account + ' 欢迎您！');
+                $('#biz_login').removeClass('biz_register');
             }
 
             //商家注册弹窗
-            $('#biz_login, #biz_login1').click(function(){
+            $('.biz_register').click(function(){
                 layer.open({
                     type: 2,
                     title: ['商家注册', 'background-color:#eee; padding-left:39%; font-size:20px;'],
@@ -62,7 +65,7 @@
 
         <div class="right-con">
             <span class="span1 tishi">没有账号？&nbsp;&nbsp;</span>
-            <span class="span2" id="biz_login" style="cursor:pointer;">立即注册</span>
+            <span class="span2 biz_register" id="biz_login" style="cursor:pointer;">立即注册</span>
             <span class="span2">|</span>
             <span class="span2"><a target="_blank" href="question">常见问题</a></span>
         </div>

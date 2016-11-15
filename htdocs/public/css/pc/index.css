@@ -7,7 +7,9 @@
 }
 
 .login_bg {
-    background: url(../../images/pc/bg_08.png) no-repeat;
+    /*background: url(../../images/pc/bg_08.png) no-repeat;*/
+    background-color:#fff;
+    border-radius: 10px;
     width: 348px;
     height: 328px;
     /*width:640px;
@@ -34,14 +36,14 @@
 }
 
 .gonggao .gonggao-con .system_news {
-    width:70%;
+    width:77%;
     float:right;
     overflow:hidden;
 }
 
 .gonggao .gonggao-con .system_news a {
     color: #313233;
-    margin-right: 50px;
+    margin-right: 80px;
     line-height: 41px;
     display:inline-block;
     width:170px;

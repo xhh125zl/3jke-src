@@ -2,6 +2,13 @@
 
 <link href="public/css/pc/index.css?t=<?php echo time(); ?>" rel="stylesheet" type="text/css">
 
+    <style type="text/css">
+    .prompt { width:55%; margin:20px auto; }
+    .prompt h1{ font-size:20px;line-height:100px; color:#262626; }
+    .prompt p { height:100px; line-height:30px; }
+    .prompt a { display:inline-block; color:#ffffff; text-align:center; width:150px; height:40px; line-height:40px; background-color:#3a9cfd; border-radius:10px; } 
+    </style>
+
     <div class="banner"></div>
 
     <div class="login_bg">
